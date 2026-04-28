@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live updates: 'No Kings' protests across Palm Beach County — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .lb-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .lb-dot{color:var(--rule);font-size:0.5rem}
+  .lb-headline{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1rem;color:var(--ink)}
+  .lb-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.5vw,1.15rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.5rem}
+  .lb-byline{display:flex;align-items:baseline;gap:1rem;padding:0.85rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .lb-entries{position:relative}
+  .lb-entries::before{content:'';position:absolute;left:72px;top:0;bottom:0;width:1px;background:var(--rule)}
+  .lb-entry{display:grid;grid-template-columns:72px 1fr}
+  .lb-time-col{padding:1.5rem 1rem 1.5rem 0;text-align:right}
+  .lb-time{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);line-height:1.4}
+  .lb-content-col{padding:1.5rem 0 1.5rem 1.5rem;border-bottom:1px solid var(--rule)}
+  .lb-entry:last-child .lb-content-col{border-bottom:none}
+  .lb-entry-headline{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.3}
+  .lb-entry-text{font-family:'IBM Plex Sans',sans-serif;font-size:0.88rem;font-weight:300;line-height:1.7;color:var(--ink);margin-bottom:0.75rem}
+  .lb-entry-text:last-child{margin-bottom:0}
+  .lb-entry.lb-key .lb-time-col::after{content:'';display:block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin:0.35rem 0 0 auto}
+  .lb-entry:not(.lb-key) .lb-time-col::after{content:'';display:block;width:6px;height:6px;border-radius:50%;background:var(--rule);margin:0.5rem 0 0 auto}
+  .lb-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--rule);padding:0.15rem 0.4rem;color:var(--muted);margin-bottom:0.5rem}
+  .lb-tag.key-tag{border-color:var(--accent);color:var(--accent)}
+  blockquote{border-left:3px solid var(--accent);padding:0.4rem 0 0.4rem 1rem;margin:0.75rem 0}
+  blockquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:0.95rem;line-height:1.6;color:var(--ink);margin-bottom:0}
+  .lb-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:2rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}.lb-entries::before{left:56px}.lb-entry{grid-template-columns:56px 1fr}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="lb-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="lb-dot">◆</span>
+    <span>Live Blog · Community</span>
+  </div>
+  <h1 class="lb-headline">Live updates: 'No Kings' protests across Palm Beach County</h1>
+
+  <div class="lb-deck">Retirees and residents packed both sides of PGA Boulevard in Palm Beach Gardens to protest Trump.</div>
+  <div class="lb-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">March 28, 2026</span>
+  </div>
+  <div class="lb-entries">
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">10:12 AM</div></div>
+      <div class="lb-content-col"><p class="lb-entry-text">Joanne Switzer, 71, of Jupiter, has attended every No Kings protest since the movement began last year.</p><p class="lb-entry-text">“We’re doing it for y’all,” she said, dressed as the Statue of Liberty in a teal dress, complete with a torch and a crown. “We don’t want to leave this world like this. We want y’all to breathe free.”</p><p class="lb-entry-text">A retired paralegal, Switzer said she can’t afford to stay home and despair.</p><p class="lb-entry-text">“You've got act. Action will create a new way.”</p></div>
+    </div>
+
+    <div class="lb-entry lb-key">
+      <div class="lb-time-col"><div class="lb-time"></div></div>
+      <div class="lb-content-col"><div class="lb-tag key-tag">Protest begins</div><p class="lb-entry-text">Demonstrators lined both sides of PGA Boulevard in Palm Beach Gardens by the protest’s 10 a.m. start time. Some of shaking noise makers, others are simply screaming. There’s a constant stream of supportive honks from passing cars, but a few middle fingers, too.</p><p class="lb-entry-text">“Clean up on aisle 47!” shouted a woman, sitting in a lawn chair. “Get rid of Cheetos!”</p></div>
+    </div>
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">10:39 AM</div></div>
+      <div class="lb-content-col"><p class="lb-entry-text">Diane Bowman, 78, of Tequesta, held a sign that said “Tyrants fall when people rise.”</p><p class="lb-entry-text">“People don’t pay attention,” she said. “And I’m afraid I was one of them.”</p><p class="lb-entry-text">Bowman, a retired teacher who carpooled to the protest with a handful of neighbors, said she lived through the “hippie age” but didn’t feel compelled then to act then the way she feels now.</p><p class="lb-entry-text">“I should have been protesting the Vietnam war, but instead I did nothing,” she said. “This is my contribution.”</p><p class="lb-entry-text">She said she hadn’t encountered any counterprotesters yet — only the occasional “Trump truck” whose passengers scream obscenities through open windows.</p><p class="lb-entry-text">Bowman said she and her friends just shout back: “Love you!”</p></div>
+    </div>
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">10:51 AM</div></div>
+      <div class="lb-content-col"><p class="lb-entry-text">Bill Reirden detests President Donald Trump’s policies as much as the next protester, but his gripe with the president is also personal.</p><p class="lb-entry-text">Reirden, 72, lives near Palm Beach International Airport. The presidential motorcade snarls traffic along Southern Boulevard, he said, and the sheriff’s helicopter frequently circles his neighborhood for an hour at a time. He hears it from inside his living room, even with the television volume turned to its max.</p><p class="lb-entry-text">His response, until this &quot;No Kings&quot; protest, had been informal.</p><p class="lb-entry-text">“I’d be outside in my driveway with my middle finger up,” he said. “I actually pointed my leaf blower at it once.”</p></div>
+    </div>
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">11 AM</div></div>
+      <div class="lb-content-col"><p class="lb-entry-text">Protesters cheer for honking cars, but the sight of younger people riles them up even more. Many have said this movement is for them.</p><p class="lb-entry-text">Those who neither chant nor march instead hand out water, or political fliers, or sign-making material. Many pause to take selfies with the more extravagantly dressed attendees, including a group of women who painted themselves a Lady-Liberty shade of green.</p></div>
+    </div>
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">11:37 AM</div></div>
+      <div class="lb-content-col"><div class="lb-entry-headline">Attendance swells despite the heat</div><p class="lb-entry-text">We're an hour into the protest, and the crowd has grown significantly. People are sitting and standing shoulder-to-shoulder under the shade of trees on the south side of PGA. There’s no shade on the north side, but protesters have filled it nonetheless.</p><p class="lb-entry-text">Some wave signs at passing cars. Others march along the side walk, shouting through cupped hands and the occasional megaphone.</p><p class="lb-entry-text">“How’s it going MAGA?” asked one. “Are you making America great again yet?”</p></div>
+    </div>
+
+    <div class="lb-entry">
+      <div class="lb-time-col"><div class="lb-time">1:23 PM</div></div>
+      <div class="lb-content-col"><div class="lb-entry-headline">'Sesame Street' favorite makes appearance</div><p class="lb-entry-text">At the last &quot;No Kings&quot; rally in Palm Beach Gardens, attendees came dressed as frogs, unicorns, penguins and dinosaurs. Far fewer wore costumes today, opting instead for T-shirts, shorts and baseball caps.</p><p class="lb-entry-text">Mariann Hodge, 75, wore an oversized Elmo head. Afraid of the heat, she’d stuck a portable fan inside the head and left its accompanying body and hands at home.</p><p class="lb-entry-text">“I wish I had my hands,” she said as she waved at passing cars.</p></div>
+    </div>
+
+    <div class="lb-entry lb-key">
+      <div class="lb-time-col"><div class="lb-time">1:53 PM</div></div>
+      <div class="lb-content-col"><div class="lb-entry-headline">Counter protestor says he was attacked</div><p class="lb-entry-text">A masked man in his 30s arrived at the Palm Beach Gardens rally for his first counter-protest and left minutes later after a skirmish with demonstrators.</p><p class="lb-entry-text">“I was attacked,” he said as he left the protest, struggling to carry a heavy sign that said “Deport the white liberals.”</p><p class="lb-entry-text">“Someone grabbed my mask and pulled it down. Did they punch me? No, but they obviously thought that grabbing someone's mask and pulling down is not assault, and it is, legally,” he said.</p><p class="lb-entry-text">Unwanted touch is a battery, said the Palm Beach Gardens police officer escorting him from the protest. Demonstrators cheered while he left.</p></div>
+    </div>
+  </div>
+  <div class="lb-end">· · ·</div>
+  <div class="originally-published">
+    Originally published live in <strong>The Palm Beach Post</strong> · <strong>March 28, 2026</strong>
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
