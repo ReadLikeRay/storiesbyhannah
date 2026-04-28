@@ -86,14 +86,14 @@
 <header>
   <div class="masthead-name">Hannah Phillips<span>.</span></div>
   <div class="masthead-right">
-    <div class="masthead-meta">Journalist &middot; South Florida<br>Public Safety &middot; Criminal Justice</div>
+    <div class="masthead-meta">Investigative Reporter &middot; The Palm Beach Post<br>Public Safety &middot; Criminal Justice</div>
     <a class="nav-resume" href="resume.html">View R&eacute;sum&eacute; &rarr;</a>
   </div>
 </header>
 <div class="hero"><h1 class="hero-headline">Let me tell<br>you a <em>story.</em></h1></div>
 <hr class="section-divider">
 <div class="topic-section">
-  <div class="topic-label">Browse by topic</div>
+  <div class="topic-label">Browse clips by topic</div>
   <div class="topic-grid" id="topicGrid"></div>
   <div class="expand-panel" id="expandPanel"></div>
 </div>
@@ -212,11 +212,23 @@ const stories = [
     "date": "Sept. 30, 2022",
     "url": "articles/hundreds-flee-hurricane-ian.html",
     "inLedeRoulette": false
+  },
+  {
+    "headline": "'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed",
+    "brief": "A Palm Beach County jury awarded $100 million — twice the amount requested — to the family of a 3-year-old boy whose penis was partially severed during a botched 2021 circumcision performed by Berto Lopez, an OB-GYN who had already had his Florida medical license revoked. Lopez, who has a documented history of patient deaths and injuries spanning 33 years, did not attend the trial or mount a defense.",
+    "lede": "Days after the Florida Board of Medicine voted to revoke his medical license, OB-GYN Berto Lopez performed a circumcision anyway. He botched it, severing the child’s penis and adding another name to a long list of patients whose mangled procedures caused the board to pull his license in the first place.",
+    "topics": [
+      "courts"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "Aug. 28, 2024",
+    "url": "articles/ex-doctor-owes-100-million.html",
+    "inLedeRoulette": true
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"crime","label":"Crime"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"celebrity","label":"Celebrity"},{"id":"liveblog","label":"Live Blog"},{"id":"disasters","label":"Natural Disasters"},{"id":"goodnews","label":"Good News"}];
 const expandedTopics = [];
-const publications = ["The New York Times","Associated Press","USA Today","The Palm Beach Post","The Miami Herald","The Orlando Sentinel"];
+const publications = ["The New York Times","Associated Press","Chicago Tribune","Orlando Sentinel","USA Today","Miami Herald"];
 (function(){const grid=document.getElementById('pubGrid');publications.forEach((name,i)=>{const span=document.createElement('span');span.className='pub-name';span.textContent=name;grid.appendChild(span);if(i<publications.length-1){const dot=document.createElement('span');dot.className='pub-dot';dot.textContent='◆';grid.appendChild(dot);}});})();
 const ledeStories=stories.filter(s=>s.inLedeRoulette&&s.lede);
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
