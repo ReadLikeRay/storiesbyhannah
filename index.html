@@ -40,7 +40,7 @@
   .expand-tag:hover,.expand-tag.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
   .stories-section{padding:0 4rem 3rem;display:none;}
   .stories-section.visible{display:block;}
-  .stories-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);}
+  .stories-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:1rem;padding-bottom:0;}
   .stories-topic-label{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--muted);}
   .stories-count{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;}
   .story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;}
@@ -83,32 +83,21 @@
 </style>
 </head>
 <body>
-
 <header>
   <div class="masthead-name">Hannah Phillips<span>.</span></div>
   <div class="masthead-right">
-    <div class="masthead-meta">
-      Investigative Reporter &middot; The Palm Beach Post<br>
-      Public Safety &middot; Criminal Justice
-    </div>
+    <div class="masthead-meta">Investigative Reporter &middot; The Palm Beach Post<br>Public Safety &middot; Criminal Justice</div>
     <a class="nav-resume" href="resume.html">View R&eacute;sum&eacute; &rarr;</a>
   </div>
 </header>
-
-<div class="hero">
-  <h1 class="hero-headline">Let me tell<br>you a <em>story.</em></h1>
-</div>
-
+<div class="hero"><h1 class="hero-headline">Let me tell<br>you a <em>story.</em></h1></div>
 <hr class="section-divider">
-
 <div class="topic-section">
   <div class="topic-label">Browse clips by topic</div>
   <div class="topic-grid" id="topicGrid"></div>
   <div class="expand-panel" id="expandPanel"></div>
 </div>
-
 <hr class="section-divider">
-
 <div class="stories-section" id="storiesSection">
   <div class="stories-header">
     <span class="stories-topic-label" id="storiesTopicLabel"></span>
@@ -116,29 +105,23 @@
   </div>
   <div class="story-grid" id="storyGrid"></div>
 </div>
-
 <div class="lede-section">
   <div class="lede-label">Or &mdash; start with a first line</div>
   <div class="lede-text" id="ledeText"></div>
   <div class="lede-source" id="ledeSource"></div>
   <div class="lede-actions">
     <a class="btn-read" id="ledeReadBtn" href="#" target="_blank">Read the story &nearr;</a>
-    <button class="btn-again" id="ledeAgainBtn">
-      <span class="spin">&circlearrowleft;</span><span>Try another</span>
-    </button>
+    <button class="btn-again" id="ledeAgainBtn"><span class="spin">&circlearrowleft;</span><span>Try another</span></button>
   </div>
 </div>
-
 <div class="pub-section">
   <div class="pub-label">Work also published in</div>
   <div class="pub-grid" id="pubGrid"></div>
 </div>
-
 <footer>
   <p>&copy; 2026 Hannah Phillips &middot; All rights reserved</p>
   <p><a href="resume.html">R&eacute;sum&eacute;</a> &nbsp;&middot;&nbsp; Palm Beach, Florida</p>
 </footer>
-
 <script>
 const stories = [
   {
@@ -177,140 +160,48 @@ const stories = [
     "date": "Aug. 29, 2023",
     "url": "articles/lose-the-husband-keep-the-money.html",
     "inLedeRoulette": true
+  },
+  {
+    "headline": "Meet the 70-year-old Quaalude queenpin of Boca Raton",
+    "brief": "While caring for her elderly mother, this 70-year-old Boca Raton woman earned more than $1.3 million selling Quaaludes to wealthy neighbors.",
+    "lede": "Federal agents expected a cartel. Instead, they found a grandmother with 1.4 grams of a disco-era sedative in her trunk.",
+    "topics": [
+      "courts",
+      "crime",
+      "enterprise"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "Sept. 20, 2023",
+    "url": "articles/meet-the-70-year-old-quaalude-queenpin-of-boca-raton.html",
+    "inLedeRoulette": true
+  },
+  {
+    "headline": "Live updates: 'No Kings' protests across Palm Beach County",
+    "brief": "Demonstrators fanned out across seven municipalities before converging on a twilight march toward Trump's Palm Beach estate.",
+    "lede": "Demonstrators fanned out across seven municipalities before converging on a twilight march toward Trump's Palm Beach estate.",
+    "topics": [
+      "politics",
+      "liveblog"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "March 28, 2026",
+    "url": "articles/live-updates-no-kings-protests-across-palm-beach-county.html",
+    "inLedeRoulette": false
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"crime","label":"Crime"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"celebrity","label":"Celebrity"},{"id":"liveblog","label":"Live Blog"},{"id":"disasters","label":"Natural Disasters"},{"id":"goodnews","label":"Good News"}];
 const expandedTopics = [];
 const publications = ["The New York Times","Associated Press","USA Today","The Palm Beach Post","The Miami Herald","The Orlando Sentinel"];
-
-// Publications
-(function(){
-  const grid = document.getElementById('pubGrid');
-  publications.forEach((name, i) => {
-    const span = document.createElement('span');
-    span.className = 'pub-name';
-    span.textContent = name;
-    grid.appendChild(span);
-    if (i < publications.length - 1) {
-      const dot = document.createElement('span');
-      dot.className = 'pub-dot';
-      dot.textContent = '◆';
-      grid.appendChild(dot);
-    }
-  });
-})();
-
-// Lede roulette
-const ledeStories = stories.filter(s => s.inLedeRoulette && s.lede);
+(function(){const grid=document.getElementById('pubGrid');publications.forEach((name,i)=>{const span=document.createElement('span');span.className='pub-name';span.textContent=name;grid.appendChild(span);if(i<publications.length-1){const dot=document.createElement('span');dot.className='pub-dot';dot.textContent='◆';grid.appendChild(dot);}});})();
+const ledeStories=stories.filter(s=>s.inLedeRoulette&&s.lede);
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-let ledeQueue = ledeStories.length ? shuffle(ledeStories.map((_,i)=>i)) : [];
-let ledePos = 0;
-function nextLede(){
-  if(!ledeQueue.length) return;
-  if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}
-  const story=ledeStories[ledeQueue[ledePos++]];
-  const textEl=document.getElementById('ledeText');
-  const sourceEl=document.getElementById('ledeSource');
-  textEl.classList.add('fading');sourceEl.classList.add('fading');
-  setTimeout(()=>{
-    textEl.textContent='“'+story.lede+'”';
-    sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;
-    document.getElementById('ledeReadBtn').href=story.url;
-    textEl.classList.remove('fading');sourceEl.classList.remove('fading');
-  },240);
-}
+let ledeQueue=ledeStories.length?shuffle(ledeStories.map((_,i)=>i)):[];let ledePos=0;
+function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent='“'+story.lede+'”';sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
 document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
-if(ledeQueue.length) nextLede();
-
-// Topic selector
-let activeTopicId = null;
-function renderTopics(){
-  const grid = document.getElementById('topicGrid');
-  topics.forEach(topic => {
-    const btn = document.createElement('button');
-    btn.className = 'topic-btn';
-    btn.innerHTML = '<span>'+topic.label+'</span>';
-    btn.addEventListener('click', () => {
-      const isActive = btn.classList.contains('active');
-      document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));
-      activeTopicId = null;
-      if(isActive){
-        document.getElementById('storiesSection').classList.remove('visible');
-      } else {
-        btn.classList.add('active');
-        activeTopicId = topic.id;
-        selectTopic(topic.id, topic.label);
-      }
-    });
-    grid.appendChild(btn);
-  });
-
-  // Browse all button
-  if(expandedTopics.length){
-    const browseBtn = document.createElement('button');
-    browseBtn.className = 'topic-btn browse-btn';
-    browseBtn.innerHTML = '<span>Browse all topics ▾</span>';
-    browseBtn.addEventListener('click', () => {
-      const panel = document.getElementById('expandPanel');
-      const open = panel.classList.toggle('open');
-      browseBtn.querySelector('span').textContent = open ? 'Hide topics ▴' : 'Browse all topics ▾';
-      if(open && !panel.innerHTML){
-        const groups = {};
-        expandedTopics.forEach(t => {
-          const g = t.group || 'topics';
-          if(!groups[g]) groups[g] = [];
-          groups[g].push(t);
-        });
-        const groupLabels = {people:'People & Cases',topics:'Topics',format:'Format',featured:'Featured'};
-        Object.keys(groups).forEach(g => {
-          const lbl = document.createElement('div');
-          lbl.className = 'expand-group-label';
-          lbl.textContent = groupLabels[g] || g;
-          panel.appendChild(lbl);
-          const row = document.createElement('div');
-          row.className = 'expand-tags';
-          groups[g].forEach(t => {
-            const tag = document.createElement('button');
-            tag.className = 'expand-tag';
-            tag.textContent = t.label;
-            tag.addEventListener('click', () => {
-              document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));
-              tag.classList.add('active');
-              activeTopicId = t.id;
-              selectTopic(t.id, t.label);
-            });
-            row.appendChild(tag);
-          });
-          panel.appendChild(row);
-        });
-      }
-    });
-    grid.appendChild(browseBtn);
-  }
-}
-
-function selectTopic(id, label){
-  const filtered = stories.filter(s => s.topics.includes(id));
-  const section = document.getElementById('storiesSection');
-  section.classList.add('visible');
-  document.getElementById('storiesTopicLabel').textContent = label;
-  document.getElementById('storiesCount').textContent = filtered.length+' stor'+(filtered.length===1?'y':'ies');
-  const grid = document.getElementById('storyGrid');
-  grid.innerHTML = '';
-  filtered.forEach(story => {
-    const a = document.createElement('a');
-    a.href = story.url;
-    a.className = 'story-card';
-    a.innerHTML = '<div class="story-meta">'+story.publication+' · '+story.date+'</div>'
-      +'<div class="story-headline">'+story.headline+'</div>'
-      +'<div class="story-brief">'+story.brief+'</div>'
-      +'<span class="story-arrow">↗</span>';
-    grid.appendChild(a);
-    void a.offsetWidth;
-  });
-  section.scrollIntoView({behavior:'smooth',block:'start'});
-}
-
+if(ledeQueue.length)nextLede();
+let activeTopicId=null;
+function renderTopics(){const grid=document.getElementById('topicGrid');topics.forEach(topic=>{const btn=document.createElement('button');btn.className='topic-btn';btn.innerHTML='<span>'+topic.label+'</span>';btn.addEventListener('click',()=>{const isActive=btn.classList.contains('active');document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));activeTopicId=null;if(isActive){document.getElementById('storiesSection').classList.remove('visible');}else{btn.classList.add('active');activeTopicId=topic.id;selectTopic(topic.id,topic.label);}});grid.appendChild(btn);});if(expandedTopics.length){const browseBtn=document.createElement('button');browseBtn.className='topic-btn browse-btn';browseBtn.innerHTML='<span>Browse all topics ▾</span>';browseBtn.addEventListener('click',()=>{const panel=document.getElementById('expandPanel');const open=panel.classList.toggle('open');browseBtn.querySelector('span').textContent=open?'Hide topics ▴':'Browse all topics ▾';if(open&&!panel.innerHTML){const groups={};expandedTopics.forEach(t=>{const g=t.group||'topics';if(!groups[g])groups[g]=[];groups[g].push(t);});const groupLabels={people:'People & Cases',topics:'Topics',format:'Format',featured:'Featured'};Object.keys(groups).forEach(g=>{const lbl=document.createElement('div');lbl.className='expand-group-label';lbl.textContent=groupLabels[g]||g;panel.appendChild(lbl);const row=document.createElement('div');row.className='expand-tags';groups[g].forEach(t=>{const tag=document.createElement('button');tag.className='expand-tag';tag.textContent=t.label;tag.addEventListener('click',()=>{document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));tag.classList.add('active');activeTopicId=t.id;selectTopic(t.id,t.label);});row.appendChild(tag);});panel.appendChild(row);});}});grid.appendChild(browseBtn);}}
+function selectTopic(id,label){const filtered=stories.filter(s=>s.topics.includes(id));const section=document.getElementById('storiesSection');section.classList.add('visible');document.getElementById('storiesTopicLabel').textContent=label;document.getElementById('storiesCount').textContent=filtered.length+' stor'+(filtered.length===1?'y':'ies');const grid=document.getElementById('storyGrid');grid.innerHTML='';filtered.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='story-card';a.innerHTML='<div class="story-meta">'+story.publication+' · '+story.date+'</div>'+'<div class="story-headline">'+story.headline+'</div>'+'<div class="story-brief">'+story.brief+'</div>'+'<span class="story-arrow">↗</span>';grid.appendChild(a);void a.offsetWidth;});section.scrollIntoView({behavior:'smooth',block:'start'});}
 renderTopics();
 </script>
 </body>
