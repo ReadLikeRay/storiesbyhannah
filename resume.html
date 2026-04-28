@@ -4,6 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hannah Phillips — Résumé</title>
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0e0c'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23f5f0e8'>H</text></svg>">
+ <script>
+(function(){
+  const correct = 'yourpassword';
+  const key = 'sbh_auth';
+  if (sessionStorage.getItem(key) === correct) return;
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.style.display = 'none';
+    const gate = document.createElement('div');
+    gate.innerHTML = `
+      <div style="background:#f5f0e8;min-height:100vh;display:flex;flex-direction:column;font-family:'IBM Plex Sans',sans-serif;">
+        <div style="border-bottom:3px double #0f0e0c;padding:2rem 3rem;">
+          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;letter-spacing:-0.02em;color:#0f0e0c;">Hannah Phillips<span style="color:#c41e1e;">.</span></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.16em;color:#7a7468;margin-bottom:2rem;">Private Portfolio</div>
+          <div style="border:1.5px solid #0f0e0c;padding:2.5rem 3rem;background:#ede7d9;width:100%;max-width:400px;box-sizing:border-box;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;letter-spacing:-0.02em;color:#0f0e0c;margin-bottom:0.35rem;">Enter password</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:#7a7468;margin-bottom:1.75rem;">This portfolio is password protected</div>
+            <input id="pwInput" type="password" placeholder="········" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:300;color:#0f0e0c;background:#f5f0e8;border:1.5px solid #d0c9bc;padding:0.65rem 0.85rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;letter-spacing:0.2em;">
+            <div id="pwError" style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.1em;color:#c41e1e;margin-bottom:0.75rem;min-height:1rem;"></div>
+            <button id="pwBtn" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#f5f0e8;background:#0f0e0c;border:none;padding:0.75rem;cursor:pointer;">Enter →</button>
+          </div>
+        </div>
+        <div style="border-top:1px solid #d0c9bc;padding:1rem 3rem;background:#ede7d9;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:#7a7468;">© 2026 Hannah Phillips</div>
+        </div>
+      </div>`;
+    document.body.parentNode.insertBefore(gate, document.body);
+
+    function attempt(){
+      const val = document.getElementById('pwInput').value;
+      if(val === correct){
+        sessionStorage.setItem(key, correct);
+        gate.remove();
+        document.body.style.display = '';
+      } else {
+        document.getElementById('pwError').textContent = 'Incorrect password — try again';
+        document.getElementById('pwInput').value = '';
+        document.getElementById('pwInput').focus();
+      }
+    }
+
+    document.getElementById('pwBtn').addEventListener('click', attempt);
+    document.getElementById('pwInput').addEventListener('keydown', function(e){ if(e.key === 'Enter') attempt(); });
+  });
+})();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
