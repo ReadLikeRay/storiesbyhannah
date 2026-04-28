@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hannah Phillips — Résumé</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f0e8;
+    --cream: #ede7d9;
+    --accent: #c41e1e;
+    --muted: #7a7468;
+    --rule: #d0c9bc;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  header {
+    border-bottom: 3px double var(--ink);
+    padding: 2.5rem 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .masthead-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+  }
+
+  .masthead-name span { color: var(--accent); }
+
+  .nav-back {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    padding: 0.4rem 0.9rem;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .nav-back:hover { background: var(--ink); color: var(--paper); }
+
+  .resume-wrap {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 130px);
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    border-right: 1px solid var(--rule);
+    padding: 3rem 2rem;
+    background: var(--cream);
+  }
+
+  .sidebar-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+  }
+
+  .sidebar-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-section { margin-bottom: 2rem; }
+
+  .sidebar-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sidebar-item {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.8;
+  }
+
+  .sidebar-item a { color: var(--ink); text-decoration: none; transition: color 0.15s; }
+  .sidebar-item a:hover { color: var(--accent); }
+
+  .skill-tag {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--rule);
+    padding: 0.18rem 0.45rem;
+    margin: 0.2rem 0.15rem 0 0;
+    color: var(--muted);
+  }
+
+  /* MAIN */
+  .resume-main { padding: 3rem 4rem; }
+
+  .resume-section { margin-bottom: 3.5rem; }
+
+  .resume-section-title {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .job { margin-bottom: 2.5rem; }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .job-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .job-dates {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .job-org {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .job-bullets { list-style: none; padding: 0; }
+
+  .job-bullets li {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink);
+    padding: 0.45rem 0 0.45rem 1.2rem;
+    position: relative;
+  }
+
+  .job-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--rule);
+    font-size: 0.7rem;
+    top: 0.58rem;
+  }
+
+  /* LINKED BULLET */
+  .linked-bullet { cursor: pointer; }
+
+  .linked-bullet .bullet-text {
+    border-bottom: 1px dashed var(--rule);
+    padding-bottom: 1px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .linked-bullet:hover .bullet-text {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .bullet-icon {
+    font-size: 0.6rem;
+    color: var(--rule);
+    margin-left: 0.3rem;
+    vertical-align: middle;
+    transition: color 0.15s;
+  }
+
+  .linked-bullet:hover .bullet-icon { color: var(--accent); }
+
+  /* POPUP */
+  .popup-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+    display: none;
+  }
+
+  .popup-overlay.visible { display: block; }
+
+  .popup {
+    position: fixed;
+    z-index: 600;
+    background: var(--paper);
+    border: 1.5px solid var(--ink);
+    padding: 1.75rem 2rem;
+    max-width: 380px;
+    width: calc(100vw - 3rem);
+    box-shadow: 6px 6px 0 var(--ink);
+    display: none;
+  }
+
+  .popup.visible {
+    display: block;
+    animation: popIn 0.15s ease both;
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: translateY(6px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .popup-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .popup-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .popup-actions { display: flex; gap: 0.75rem; align-items: center; }
+
+  .popup-read {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    border: 1.5px solid var(--ink);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s;
+    display: inline-block;
+  }
+
+  .popup-read:hover { background: var(--accent); border-color: var(--accent); }
+
+  .popup-close {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+
+  .popup-close:hover { color: var(--ink); }
+
+  /* EDU & AWARDS */
+  .edu-item { margin-bottom: 1.25rem; }
+
+  .edu-school {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+  }
+
+  .edu-degree {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--muted);
+  }
+
+  .edu-year {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  .award-item {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .award-item:last-child { border-bottom: none; }
+
+  .award-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+  }
+
+  .award-org {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+
+  footer {
+    border-top: 3px double var(--ink);
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+  }
+
+  footer p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 800px) {
+    .resume-wrap { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid var(--rule); padding: 2rem 1.5rem; }
+    header, .resume-main, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead-name">Hannah Phillips<span>.</span></div>
+  <a class="nav-back" href="index.html">← Portfolio</a>
+</header>
+
+<div class="resume-wrap">
+  <aside class="sidebar">
+    <div class="sidebar-name">Hannah<br>Phillips</div>
+    <div class="sidebar-title">Investigative Reporter</div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Contact</div>
+      <div class="sidebar-item">
+        <a href="mailto:hannah@example.com">hannah@pbpost.com</a><br>
+        Palm Beach, Florida
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Beat</div>
+      <div class="sidebar-item">
+        Public Safety<br>
+        Criminal Justice<br>
+        Investigative Reporting<br>
+        Breaking News
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Tools & Skills</div>
+      <div>
+        <span class="skill-tag">FOIA</span>
+        <span class="skill-tag">Court Records</span>
+        <span class="skill-tag">Data Analysis</span>
+        <span class="skill-tag">Document Review</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Datawrapper</span>
+        <span class="skill-tag">Spanish</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-label">Also published in</div>
+      <div class="sidebar-item">
+        The New York Times<br>
+        Associated Press<br>
+        Chicago Tribune<br>
+        Orlando Sentinel<br>
+        USA Today<br>
+        ProPublica
+      </div>
+    </div>
+  </aside>
+
+  <main class="resume-main">
+
+    <div class="resume-section">
+      <div class="resume-section-title">Experience</div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Staff Reporter, Public Safety & Criminal Justice</div>
+          <div class="job-dates">2021 — Present</div>
+        </div>
+        <div class="job-org">The Palm Beach Post · USA Today Network</div>
+        <ul class="job-bullets">
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="Inside the Deal That Let Jeffrey Epstein Walk Free"
+            data-pub="The Palm Beach Post · Feb 2026"
+            data-url="#">
+            <span class="bullet-text">Broke the story on secret coordination between federal prosecutors and Epstein's defense team, based on newly released DOJ documents obtained under the Epstein Files Transparency Act</span><span class="bullet-icon">↗</span>
+          </li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="A Shooter at Mar-a-Lago: How a Saturday Night Became a Crime Scene"
+            data-pub="The Palm Beach Post · Feb 2026"
+            data-url="#">
+            <span class="bullet-text">Led breaking coverage of the Mar-a-Lago shooting, coordinating real-time reporting across four law enforcement agencies</span><span class="bullet-icon">↗</span>
+          </li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="She Called Police 11 Times. The 12th Time, He Killed Her."
+            data-pub="The Palm Beach Post · Jan 2026"
+            data-url="#">
+            <span class="bullet-text">Produced year-long investigation into domestic violence system failures, reconstructing a victim's final months through police logs, court filings, and interviews with family and first responders</span><span class="bullet-icon">↗</span>
+          </li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="Epstein's Storage Units Held Evidence No One Came to Claim"
+            data-pub="The Palm Beach Post · Jan 2026"
+            data-url="#">
+            <span class="bullet-text">Revealed that key physical evidence in the Epstein case sat unclaimed in storage units for over a decade, prompting congressional calls for review</span><span class="bullet-icon">↗</span>
+          </li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="The Attorneys Who Keep Appearing on Both Sides of the Same Cases"
+            data-pub="The Palm Beach Post · Dec 2025"
+            data-url="#">
+            <span class="bullet-text">Built a database of federal case records to document a revolving-door pattern in trafficking prosecutions</span><span class="bullet-icon">↗</span>
+          </li>
+          <li>Covered the Parkland sentencing trial from jury selection through verdict, producing daily courtroom dispatches and longform analysis</li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="The Nonprofit That Almost Died — Until Readers Saved It"
+            data-pub="The Palm Beach Post · Nov 2025"
+            data-url="#">
+            <span class="bullet-text">Reported on a shuttering food pantry; story prompted more than $60,000 in reader donations within 72 hours, keeping the organization open</span><span class="bullet-icon">↗</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Breaking News Reporter</div>
+          <div class="job-dates">2019 — 2021</div>
+        </div>
+        <div class="job-org">Orlando Sentinel</div>
+        <ul class="job-bullets">
+          <li>Covered crime, courts, and public safety across Central Florida on deadline</li>
+          <li class="linked-bullet" onclick="showPopup(this, event)"
+            data-headline="A Cold Case Murder, a Confession, and a Family That Never Stopped Looking"
+            data-pub="The Palm Beach Post · Mar 2025"
+            data-url="#">
+            <span class="bullet-text">Originated the cold case investigation that led to a confession 30 years after the victim disappeared</span><span class="bullet-icon">↗</span>
+          </li>
+          <li>Developed sources across Orange County Sheriff's Office, Orlando PD, and State Attorney's Office</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <div class="job-title">Staff Reporter</div>
+          <div class="job-dates">2017 — 2019</div>
+        </div>
+        <div class="job-org">Gainesville Sun</div>
+        <ul class="job-bullets">
+          <li>Covered Alachua County courts, UF campus crime, and local government</li>
+          <li>Launched a recurring public records accountability series that resulted in three policy changes</li>
+          <li>Mentored two student journalists through the UF College of Journalism</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <div class="resume-section-title">Education</div>
+      <div class="edu-item">
+        <div class="edu-school">University of Florida</div>
+        <div class="edu-degree">B.S. Journalism — Investigative Reporting concentration</div>
+        <div class="edu-year">2017</div>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <div class="resume-section-title">Recognition</div>
+      <div class="award-item">
+        <div class="award-name">Florida Press Club Award — Investigative Reporting</div>
+        <div class="award-org">Florida Press Club · 2026</div>
+      </div>
+      <div class="award-item">
+        <div class="award-name">IRE Award Finalist — Public Interest Journalism</div>
+        <div class="award-org">Investigative Reporters & Editors · 2025</div>
+      </div>
+      <div class="award-item">
+        <div class="award-name">SPJ Award — Breaking News, Large Market</div>
+        <div class="award-org">Society of Professional Journalists · 2024</div>
+      </div>
+      <div class="award-item">
+        <div class="award-name">Green Eyeshade Award — Criminal Justice Reporting</div>
+        <div class="award-org">SPJ Southeast · 2023</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+<div class="popup" id="popup">
+  <div class="popup-kicker">Story</div>
+  <div class="popup-headline" id="popupHeadline"></div>
+  <div class="popup-meta" id="popupMeta"></div>
+  <div class="popup-actions">
+    <a class="popup-read" id="popupLink" href="#" target="_blank">Read the story ↗</a>
+    <button class="popup-close" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Hannah Phillips · All rights reserved</p>
+  <p><a href="index.html">← Portfolio</a></p>
+</footer>
+
+<script>
+function showPopup(el, event) {
+  event.stopPropagation();
+
+  document.getElementById('popupHeadline').textContent = el.dataset.headline;
+  document.getElementById('popupMeta').textContent = el.dataset.pub;
+  document.getElementById('popupLink').href = el.dataset.url;
+
+  const popup = document.getElementById('popup');
+  const overlay = document.getElementById('popupOverlay');
+
+  // Position near click
+  const rect = el.getBoundingClientRect();
+  const scrollY = window.scrollY;
+  const popW = Math.min(380, window.innerWidth - 32);
+  let left = rect.left;
+  let top = rect.bottom + scrollY + 10;
+
+  if (left + popW > window.innerWidth - 16) left = window.innerWidth - popW - 16;
+  if (left < 16) left = 16;
+
+  popup.style.left = left + 'px';
+  popup.style.top = top + 'px';
+  popup.style.width = popW + 'px';
+
+  // Re-trigger animation
+  popup.classList.remove('visible');
+  void popup.offsetWidth;
+  popup.classList.add('visible');
+  overlay.classList.add('visible');
+}
+
+function closePopup() {
+  document.getElementById('popup').classList.remove('visible');
+  document.getElementById('popupOverlay').classList.remove('visible');
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+</script>
+</body>
+</html>
