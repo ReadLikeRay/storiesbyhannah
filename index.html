@@ -40,6 +40,7 @@
         sessionStorage.setItem(key, correct);
         gate.remove();
         document.body.style.display = '';
+        window.scrollTo(0, 0);
       } else {
         document.getElementById('pwError').textContent = 'Incorrect password — try again';
         document.getElementById('pwInput').value = '';
