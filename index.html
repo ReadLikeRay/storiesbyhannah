@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hannah Phillips — Journalist</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230f0e0c'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23f5f0e8'>H</text></svg>">
-<script>
+  <script>
 (function(){
   const correct = '5t0r135';
   const key = 'sbh_auth';
@@ -23,7 +22,7 @@
           <div style="border:1.5px solid #0f0e0c;padding:2.5rem 3rem;background:#ede7d9;width:100%;max-width:400px;box-sizing:border-box;">
             <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;letter-spacing:-0.02em;color:#0f0e0c;margin-bottom:0.35rem;">Enter password</div>
             <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:#7a7468;margin-bottom:1.75rem;">This portfolio is password protected</div>
-            <input id="pwInput" type="password" placeholder="········" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:16px;font-weight:300;color:#0f0e0c;background:#f5f0e8;border:1.5px solid #d0c9bc;padding:0.65rem 0.85rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;letter-spacing:0.2em;">
+            <input id="pwInput" type="password" placeholder="········" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:300;color:#0f0e0c;background:#f5f0e8;border:1.5px solid #d0c9bc;padding:0.65rem 0.85rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;letter-spacing:0.2em;">
             <div id="pwError" style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.1em;color:#c41e1e;margin-bottom:0.75rem;min-height:1rem;"></div>
             <button id="pwBtn" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#f5f0e8;background:#0f0e0c;border:none;padding:0.75rem;cursor:pointer;">Enter →</button>
           </div>
@@ -40,7 +39,6 @@
         sessionStorage.setItem(key, correct);
         gate.remove();
         document.body.style.display = '';
-        window.scrollTo(0, 0);
       } else {
         document.getElementById('pwError').textContent = 'Incorrect password — try again';
         document.getElementById('pwInput').value = '';
@@ -53,8 +51,8 @@
   });
 })();
 </script>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
- <style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc;}
   body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden;}
@@ -130,28 +128,19 @@
   footer a:hover{color:var(--accent);}
   @media(max-width:700px){header,.hero,.topic-section,.stories-section,.pub-section,footer{padding-left:1.5rem;padding-right:1.5rem;}.lede-section{margin-left:1.5rem;margin-right:1.5rem;padding:2rem;}.section-divider{margin:0 1.5rem;}.hero-headline{font-size:3rem;}.masthead-right{flex-direction:column-reverse;}}
 </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FRQJ1K6VX4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FRQJ1K6VX4');
-</script>
 </head>
 <body>
 <header>
   <div class="masthead-name">Hannah Phillips<span>.</span></div>
   <div class="masthead-right">
-    <div class="masthead-meta">Journalist &middot; South Florida</div>
+    <div class="masthead-meta">Investigative Reporter &middot; The Palm Beach Post<br>Public Safety &middot; Criminal Justice</div>
     <a class="nav-resume" href="resume.html">View R&eacute;sum&eacute; &rarr;</a>
   </div>
 </header>
 <div class="hero"><h1 class="hero-headline">Let me tell<br>you a <em>story.</em></h1></div>
 <hr class="section-divider">
 <div class="topic-section">
-  <div class="topic-label">Browse by topic</div>
+  <div class="topic-label">Browse clips by topic</div>
   <div class="topic-grid" id="topicGrid"></div>
   <div class="expand-panel" id="expandPanel"></div>
 </div>
@@ -221,7 +210,7 @@ const stories = [
   {
     "headline": "Meet the 70-year-old Quaalude queenpin of Boca Raton",
     "brief": "While caring for her elderly mother, this 70-year-old Boca Raton woman earned more than $1.3 million selling Quaaludes to wealthy neighbors.",
-    "lede": "Federal agents expected a cartel but instead found Linda Horn, a grandmother with 1.4 grams of a disco-era sedative in her trunk.",
+    "lede": "Federal agents expected a cartel. They instead found Linda Horn, a grandmother with 1.4 grams of a disco-era sedative in her trunk.",
     "topics": [
       "oddities"
     ],
@@ -280,7 +269,7 @@ const stories = [
   },
   {
     "headline": "Federal agents are using the 6-7 meme to catch suspected child predators",
-    "brief": "Undercover agents have repurposed the viral meme to help catch suspected child predators.",
+    "brief": "Undercover agents are repurposing a viral meme to help catch suspected child predators.",
     "lede": "As children across the country declare the viral \"6-7\" meme dead, the nonsensical phrase has found new life among federal agents in South Florida.",
     "topics": [
       "oddities"
@@ -289,6 +278,28 @@ const stories = [
     "date": "Feb. 3, 2026",
     "url": "articles/federal-agents-are-using-the-6-7-meme.html",
     "inLedeRoulette": false
+  },
+  {
+    "headline": "Could West Palm Police have stopped Ghislaine Maxwell in 2001?",
+    "brief": "West Palm Beach police say they had no choice but to hand off the investigation. Legal experts disagree.",
+    "lede": "After learning Ghislaine Maxwell was recruiting \"young, beautiful, unmarried women\" from Palm Beach Atlantic University to work at Jeffrey Epstein's home, West Palm Beach police referred the matter elsewhere and pursued the case no further.",
+    "topics": [
+      "enterprise"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "March 2, 2026",
+    "url": "articles/could-west-palm-police-have-stopped-ghislaine-maxwell.html",
+    "inLedeRoulette": false
+  },
+  {
+    "headline": "Therapist becomes star witness in Trump assassination attempt trial",
+    "brief": "“You’re an American hero,” Ryan Routh told the man whose keen ear and quick thinking thwarted his escape. “I celebrate you.”",
+    "lede": "Attorneys prosecuting Donald Trump’s would-be assassin could hope for no better witness than Tommy McGee.",
+    "topics": [],
+    "publication": "The Palm Beach Post",
+    "date": "Sept. 12, 2025",
+    "url": "articles/therapist-becomes-star-witness-in-trump-assassination-attemp.html",
+    "inLedeRoulette": true
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"breakingnews","label":"Breaking News"},{"id":"oddities","label":"Oddities"}];
