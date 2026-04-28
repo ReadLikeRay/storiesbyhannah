@@ -6,82 +6,80 @@
 <title>Hannah Phillips — Journalist</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --ink: #0f0e0c; --paper: #f5f0e8; --cream: #ede7d9; --accent: #c41e1e; --muted: #7a7468; --rule: #d0c9bc; }
-  body { background: var(--paper); color: var(--ink); font-family: 'IBM Plex Sans', sans-serif; min-height: 100vh; overflow-x: hidden; }
-  body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
-  header { border-bottom: 3px double var(--ink); padding: 2.5rem 4rem 2rem; display: flex; justify-content: space-between; align-items: flex-end; }
-  .masthead-name { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 900; letter-spacing: -0.02em; line-height: 0.9; }
-  .masthead-name span { color: var(--accent); }
-  .masthead-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; }
-  .masthead-meta { text-align: right; font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--muted); font-weight: 300; line-height: 1.9; text-transform: uppercase; letter-spacing: 0.05em; }
-  .nav-resume { font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--paper); background: var(--ink); border: 1.5px solid var(--ink); padding: 0.4rem 0.9rem; text-decoration: none; transition: background 0.15s, border-color 0.15s; }
-  .nav-resume:hover { background: var(--accent); border-color: var(--accent); }
-  .hero { padding: 2.5rem 4rem 1rem; max-width: 900px; }
-  .hero-headline { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
-  .hero-headline em { font-style: italic; color: var(--accent); }
-  .section-divider { margin: 0 4rem; border: none; border-top: 1px solid var(--rule); }
-  .topic-section { padding: 2rem 4rem 2rem; }
-  .topic-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 1.5rem; }
-  .topic-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; }
-  .topic-btn { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1.5px solid var(--ink); padding: 0.55rem 1.1rem; cursor: pointer; position: relative; overflow: hidden; transition: all 0.15s ease; }
-  .topic-btn::before { content: ''; position: absolute; inset: 0; background: var(--ink); transform: translateY(100%); transition: transform 0.15s ease; }
-  .topic-btn span { position: relative; z-index: 1; }
-  .topic-btn:hover::before, .topic-btn.active::before { transform: translateY(0); }
-  .topic-btn:hover span, .topic-btn.active span { color: var(--paper); }
-  .stories-section { padding: 0 4rem 3rem; display: none; }
-  .stories-section.visible { display: block; }
-  .stories-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem; padding-bottom: 0; }
-  .stories-topic-label { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic; color: var(--muted); }
-  .stories-count { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
-  .story-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0; }
-  .story-card { border: 1px solid var(--rule); margin: -1px -1px 0 0; padding: 2rem; cursor: pointer; transition: background 0.15s ease; text-decoration: none; color: inherit; display: block; position: relative; }
-  .story-card:hover { background: var(--cream); }
-  .story-card:hover .story-headline { color: var(--accent); }
-  .story-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.75rem; }
-  .story-headline { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; transition: color 0.15s ease; }
-  .story-brief { font-family: 'IBM Plex Sans', sans-serif; font-size: 0.82rem; font-weight: 300; line-height: 1.65; color: var(--muted); }
-  .story-arrow { position: absolute; bottom: 1.5rem; right: 1.5rem; font-size: 1rem; color: var(--rule); transition: color 0.15s ease, transform 0.15s ease; }
-  .story-card:hover .story-arrow { color: var(--accent); transform: translate(2px, -2px); }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-  .story-card { animation: fadeUp 0.3s ease both; }
-  .story-card:nth-child(1) { animation-delay: 0ms; }
-  .story-card:nth-child(2) { animation-delay: 60ms; }
-  .story-card:nth-child(3) { animation-delay: 120ms; }
-  .story-card:nth-child(4) { animation-delay: 180ms; }
-  .story-card:nth-child(5) { animation-delay: 240ms; }
-  .story-card:nth-child(6) { animation-delay: 300ms; }
-  .lede-section { margin: 0 4rem 4rem; border: 1.5px solid var(--ink); padding: 3rem 3.5rem; position: relative; background: var(--cream); }
-  .lede-section::before { content: '❧'; position: absolute; top: -0.95rem; left: 3rem; background: var(--cream); padding: 0 0.6rem; font-size: 1.1rem; color: var(--accent); }
-  .lede-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 1.75rem; }
-  .lede-text { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-weight: 400; font-style: italic; line-height: 1.7; color: var(--ink); min-height: 4.5rem; transition: opacity 0.22s ease; }
-  .lede-text.fading { opacity: 0; }
-  .lede-source { margin-top: 1.2rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); transition: opacity 0.22s ease; }
-  .lede-source.fading { opacity: 0; }
-  .lede-actions { margin-top: 2rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
-  .btn-read { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper); background: var(--ink); border: 1.5px solid var(--ink); padding: 0.65rem 1.5rem; cursor: pointer; text-decoration: none; transition: background 0.15s ease, border-color 0.15s ease; display: inline-block; }
-  .btn-read:hover { background: var(--accent); border-color: var(--accent); }
-  .btn-again { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); background: transparent; border: 1.5px solid var(--rule); padding: 0.65rem 1.5rem; cursor: pointer; transition: border-color 0.15s ease; display: flex; align-items: center; gap: 0.5rem; }
-  .btn-again:hover { border-color: var(--ink); }
-  .btn-again .spin { display: inline-block; transition: transform 0.45s ease; }
-  .btn-again:hover .spin { transform: rotate(180deg); }
-  .pub-section { border-top: 3px double var(--ink); padding: 3rem 4rem; background: var(--cream); }
-  .pub-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 2rem; text-align: center; }
-  .pub-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.5rem 0; }
-  .pub-name { font-family: 'Playfair Display', serif; font-size: clamp(0.95rem, 1.5vw, 1.2rem); font-weight: 700; color: var(--ink); letter-spacing: -0.01em; padding: 0.5rem 1.5rem; opacity: 0.55; transition: opacity 0.2s ease; }
-  .pub-name:hover { opacity: 1; }
-  .pub-dot { color: var(--rule); font-size: 0.5rem; padding: 0 0.25rem; }
-  footer { border-top: 1px solid var(--rule); padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; background: var(--cream); }
-  footer p { font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
-  footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
-  footer a:hover { color: var(--accent); }
-  @media (max-width: 700px) {
-    header, .hero, .topic-section, .stories-section, .pub-section, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .lede-section { margin-left: 1.5rem; margin-right: 1.5rem; padding: 2rem; }
-    .section-divider { margin: 0 1.5rem; }
-    .hero-headline { font-size: 3rem; }
-    .masthead-right { flex-direction: column-reverse; }
-  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc;}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden;}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4;}
+  header{border-bottom:3px double var(--ink);padding:2.5rem 4rem 2rem;display:flex;justify-content:space-between;align-items:flex-end;}
+  .masthead-name{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:900;letter-spacing:-0.02em;line-height:0.9;}
+  .masthead-name span{color:var(--accent);}
+  .masthead-right{display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;}
+  .masthead-meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--muted);font-weight:300;line-height:1.9;text-transform:uppercase;letter-spacing:0.05em;}
+  .nav-resume{font-family:'IBM Plex Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--paper);background:var(--ink);border:1.5px solid var(--ink);padding:0.4rem 0.9rem;text-decoration:none;transition:background 0.15s,border-color 0.15s;}
+  .nav-resume:hover{background:var(--accent);border-color:var(--accent);}
+  .hero{padding:2.5rem 4rem 1rem;max-width:900px;}
+  .hero-headline{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,4.2rem);font-weight:900;line-height:0.95;letter-spacing:-0.03em;margin-bottom:1.5rem;}
+  .hero-headline em{font-style:italic;color:var(--accent);}
+  .section-divider{margin:0 4rem;border:none;border-top:1px solid var(--rule);}
+  .topic-section{padding:2rem 4rem 2rem;}
+  .topic-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.5rem;}
+  .topic-grid{display:flex;flex-wrap:wrap;gap:0.65rem;}
+  .topic-btn{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--ink);background:transparent;border:1.5px solid var(--ink);padding:0.55rem 1.1rem;cursor:pointer;position:relative;overflow:hidden;transition:all 0.15s ease;}
+  .topic-btn::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateY(100%);transition:transform 0.15s ease;}
+  .topic-btn span{position:relative;z-index:1;}
+  .topic-btn:hover::before,.topic-btn.active::before{transform:translateY(0);}
+  .topic-btn:hover span,.topic-btn.active span{color:var(--paper);}
+  .topic-btn.browse-btn{border-color:var(--rule);border-style:dashed;color:var(--muted);}
+  .topic-btn.browse-btn::before{background:var(--muted);}
+  .expand-panel{display:none;padding:1rem 0 0.5rem;}
+  .expand-panel.open{display:block;}
+  .expand-group-label{font-family:'IBM Plex Mono',monospace;font-size:0.5rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin:0.75rem 0 0.5rem;padding-top:0.6rem;border-top:1px solid var(--rule);}
+  .expand-group-label:first-child{border-top:none;padding-top:0;margin-top:0;}
+  .expand-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+  .expand-tag{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.06em;border:1px solid var(--rule);padding:0.25rem 0.6rem;color:var(--muted);background:var(--cream);cursor:pointer;transition:all 0.12s;}
+  .expand-tag:hover,.expand-tag.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+  .stories-section{padding:0 4rem 3rem;display:none;}
+  .stories-section.visible{display:block;}
+  .stories-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--rule);}
+  .stories-topic-label{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:var(--muted);}
+  .stories-count{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;}
+  .story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;}
+  .story-card{border:1px solid var(--rule);margin:-1px -1px 0 0;padding:2rem;cursor:pointer;transition:background 0.15s ease;text-decoration:none;color:inherit;display:block;position:relative;}
+  .story-card:hover{background:var(--cream);}
+  .story-card:hover .story-headline{color:var(--accent);}
+  .story-meta{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.75rem;}
+  .story-headline{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;line-height:1.3;margin-bottom:0.75rem;transition:color 0.15s ease;}
+  .story-brief{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:300;line-height:1.65;color:var(--muted);}
+  .story-arrow{position:absolute;bottom:1.5rem;right:1.5rem;font-size:1rem;color:var(--rule);transition:color 0.15s ease,transform 0.15s ease;}
+  .story-card:hover .story-arrow{color:var(--accent);transform:translate(2px,-2px);}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+  .story-card{animation:fadeUp 0.3s ease both;}
+  .story-card:nth-child(1){animation-delay:0ms;}.story-card:nth-child(2){animation-delay:60ms;}.story-card:nth-child(3){animation-delay:120ms;}.story-card:nth-child(4){animation-delay:180ms;}.story-card:nth-child(5){animation-delay:240ms;}.story-card:nth-child(6){animation-delay:300ms;}
+  .lede-section{margin:0 4rem 4rem;border:1.5px solid var(--ink);padding:3rem 3.5rem;position:relative;background:var(--cream);}
+  .lede-section::before{content:'❧';position:absolute;top:-0.95rem;left:3rem;background:var(--cream);padding:0 0.6rem;font-size:1.1rem;color:var(--accent);}
+  .lede-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.75rem;}
+  .lede-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:400;font-style:italic;line-height:1.7;color:var(--ink);min-height:4.5rem;transition:opacity 0.22s ease;}
+  .lede-text.fading{opacity:0;}
+  .lede-source{margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);transition:opacity 0.22s ease;}
+  .lede-source.fading{opacity:0;}
+  .lede-actions{margin-top:2rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+  .btn-read{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:1.5px solid var(--ink);padding:0.65rem 1.5rem;cursor:pointer;text-decoration:none;transition:background 0.15s ease,border-color 0.15s ease;display:inline-block;}
+  .btn-read:hover{background:var(--accent);border-color:var(--accent);}
+  .btn-again{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);background:transparent;border:1.5px solid var(--rule);padding:0.65rem 1.5rem;cursor:pointer;transition:border-color 0.15s ease;display:flex;align-items:center;gap:0.5rem;}
+  .btn-again:hover{border-color:var(--ink);}
+  .btn-again .spin{display:inline-block;transition:transform 0.45s ease;}
+  .btn-again:hover .spin{transform:rotate(180deg);}
+  .pub-section{border-top:3px double var(--ink);padding:3rem 4rem;background:var(--cream);}
+  .pub-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:2rem;text-align:center;}
+  .pub-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.5rem 0;}
+  .pub-name{font-family:'Playfair Display',serif;font-size:clamp(0.95rem,1.5vw,1.2rem);font-weight:700;color:var(--ink);letter-spacing:-0.01em;padding:0.5rem 1.5rem;opacity:0.55;transition:opacity 0.2s ease;}
+  .pub-name:hover{opacity:1;}
+  .pub-dot{color:var(--rule);font-size:0.5rem;padding:0 0.25rem;}
+  footer{border-top:1px solid var(--rule);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream);}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);}
+  footer a{color:var(--muted);text-decoration:none;transition:color 0.15s;}
+  footer a:hover{color:var(--accent);}
+  @media(max-width:700px){header,.hero,.topic-section,.stories-section,.pub-section,footer{padding-left:1.5rem;padding-right:1.5rem;}.lede-section{margin-left:1.5rem;margin-right:1.5rem;padding:2rem;}.section-divider{margin:0 1.5rem;}.hero-headline{font-size:3rem;}.masthead-right{flex-direction:column-reverse;}}
 </style>
 </head>
 <body>
@@ -90,10 +88,10 @@
   <div class="masthead-name">Hannah Phillips<span>.</span></div>
   <div class="masthead-right">
     <div class="masthead-meta">
-      Investigative Reporter · The Palm Beach Post<br>
-      Public Safety · Criminal Justice
+      Investigative Reporter &middot; The Palm Beach Post<br>
+      Public Safety &middot; Criminal Justice
     </div>
-    <a class="nav-resume" href="resume.html">View Résumé →</a>
+    <a class="nav-resume" href="resume.html">View R&eacute;sum&eacute; &rarr;</a>
   </div>
 </header>
 
@@ -106,6 +104,7 @@
 <div class="topic-section">
   <div class="topic-label">Browse clips by topic</div>
   <div class="topic-grid" id="topicGrid"></div>
+  <div class="expand-panel" id="expandPanel"></div>
 </div>
 
 <hr class="section-divider">
@@ -119,13 +118,13 @@
 </div>
 
 <div class="lede-section">
-  <div class="lede-label">Or — start with a first line</div>
+  <div class="lede-label">Or &mdash; start with a first line</div>
   <div class="lede-text" id="ledeText"></div>
   <div class="lede-source" id="ledeSource"></div>
   <div class="lede-actions">
-    <a class="btn-read" id="ledeReadBtn" href="#" target="_blank">Read the story ↗</a>
+    <a class="btn-read" id="ledeReadBtn" href="#" target="_blank">Read the story &nearr;</a>
     <button class="btn-again" id="ledeAgainBtn">
-      <span class="spin">↻</span><span>Try another</span>
+      <span class="spin">&circlearrowleft;</span><span>Try another</span>
     </button>
   </div>
 </div>
@@ -136,54 +135,38 @@
 </div>
 
 <footer>
-  <p>© 2026 Hannah Phillips · All rights reserved</p>
-  <p><a href="resume.html">Résumé</a> &nbsp;·&nbsp; Palm Beach, Florida</p>
+  <p>&copy; 2026 Hannah Phillips &middot; All rights reserved</p>
+  <p><a href="resume.html">R&eacute;sum&eacute;</a> &nbsp;&middot;&nbsp; Palm Beach, Florida</p>
 </footer>
 
 <script>
-const topics = [
-  { id:'courts',    label:'Courts' },
-  { id:'crime',     label:'Crime' },
-  { id:'politics',  label:'Politics' },
-  { id:'enterprise',label:'Enterprise' },
-  { id:'analysis',  label:'Analysis' },
-  { id:'celebrity', label:'Celebrity' },
-  { id:'liveblog',  label:'Live Blog' },
-  { id:'disasters', label:'Natural Disasters' },
-  { id:'goodnews',  label:'Good News' },
-];
-
-const publications = [
-  'The New York Times','Associated Press','USA Today',
-  'The Palm Beach Post','The Miami Herald','The Orlando Sentinel'
-];
-
 const stories = [
-  { headline:"Ghislaine Maxwell's lawyer used Epstein defense in Delray teen sex case", brief:"Twenty years after Epstein, a teenage victim is deemed a prostitute again.", lede:"Twenty years after Jeffrey Epstein succeeded in shifting blame from himself to his teenage accusers, a wealthy Delray Beach man used the same tactic to spare himself from prison.", topics:['courts','crime'], publication:"The Palm Beach Post", date:"Mar 2026", url:"articles/ghislaine-maxwell-lawyer-used-epstein-defense-in-delray-teen.html" },
-  { headline:"Could West Palm Police have stopped Ghislaine Maxwell in 2001?", brief:"A 2001 complaint described Maxwell recruiting teenage girls — raising questions about why investigators never acted.", lede:"The complaint was logged on a Tuesday in April 2001, assigned a case number, and never followed up on. It was not the only one.", topics:['courts','crime','enterprise'], publication:"The Palm Beach Post", date:"Mar 2026", url:"#" },
-  { headline:"Jury convicts Ryan Routh of trying to assassinate Trump", brief:"Routh was found guilty on all counts for lying in wait outside Trump International Golf Club.", lede:"Ryan Wesley Routh was convicted Thursday of attempting to assassinate Donald Trump at his West Palm Beach golf club — then, within minutes of the verdict, tried to address the jury directly.", topics:['courts','crime','politics'], publication:"The Palm Beach Post", date:"Oct 2024", url:"#" },
-  { headline:"Man fatally shot near Mar-a-Lago after entering perimeter with weapons", brief:"Austin Tucker Martin was killed by Secret Service after breaching Trump's Palm Beach compound.", lede:"A man armed with weapons was shot and killed by Secret Service agents Saturday after breaching the outer security perimeter of Donald Trump's Mar-a-Lago resort.", topics:['crime','politics'], publication:"The Palm Beach Post", date:"Feb 2026", url:"#" },
-  { headline:"Cole Goldberg acquitted in '90 Day Fiancé' Schwitzky drowning case", brief:"After a week-long bench trial, a judge found Cole Goldberg not guilty of attempted murder and domestic battery.", lede:"A Boca Raton man accused of trying to drown his '90 Day Fiancé' star girlfriend during a Boca Bash boat party was acquitted of all charges Wednesday.", topics:['courts','crime','celebrity'], publication:"The Palm Beach Post", date:"Mar 2026", url:"#" },
-  { headline:"Nikolas Cruz formally sentenced to life in prison for Parkland massacre", brief:"Victims' families delivered searing impact statements before the Parkland shooter received 17 life sentences.", lede:"Seventeen families got the moment they had dreaded and demanded for four years, their voices raw, when Nikolas Cruz was formally sentenced to life in prison.", topics:['courts','crime'], publication:"The Palm Beach Post", date:"Nov 2022", url:"#" },
-  { headline:"Pam Bondi's fiery Epstein hearing raises questions about Trump's defense", brief:"Bondi's combative Senate testimony drew scrutiny of the DOJ's limited document releases.", lede:"Attorney General Pam Bondi arrived at a congressional hearing last week to answer for the Justice Department's handling of the Jeffrey Epstein files.", topics:['politics','analysis'], publication:"The Palm Beach Post", date:"Feb 2026", url:"#" },
-  { headline:"Secret Service adds gunshot sensors at Palm Beach International Airport", brief:"ShotSpotter technology went in at PBIA as Trump's Mar-a-Lago visits intensified.", lede:"The Secret Service has quietly installed a gunshot detection system at Palm Beach International Airport.", topics:['politics','enterprise'], publication:"The Palm Beach Post", date:"Feb 2026", url:"#" },
-  { headline:"The attorneys who keep appearing on both sides of the same cases", brief:"A data analysis found lawyers who once brought charges later defended accused traffickers.", lede:"The name appeared twice in the same federal case file — once on the prosecution's letterhead, and once on the defense team's.", topics:['courts','crime','analysis','enterprise'], publication:"The Palm Beach Post", date:"Dec 2025", url:"#" },
-  { headline:"A South Florida woman killed her abusive husband. Does she belong in prison?", brief:"A woman who shot and killed her abusive husband after years of documented domestic violence is fighting for her freedom.", lede:"For seven years, Maria Tritico watched her husband drink himself into a different man.", topics:['courts','crime','enterprise'], publication:"The Palm Beach Post", date:"Jan 2025", url:"#" },
-  { headline:"Jack Nicklaus speaks out on son's domestic violence charge", brief:"The golf legend broke his silence after his son Steve Nicklaus was arrested in Palm Beach County.", lede:"Jack Nicklaus had not spoken publicly about his son's arrest. Then a reporter showed up at the door.", topics:['courts','crime','celebrity'], publication:"The Palm Beach Post", date:"Jan 2026", url:"#" },
-  { headline:"Hurricane Milton: Live updates from Palm Beach County", brief:"Tracking damage, power outages, and emergency response as Milton moved across Florida.", lede:"By 6 a.m., the eyewall had passed and the phones at the Palm Beach County Emergency Operations Center had not stopped ringing.", topics:['disasters','liveblog'], publication:"The Palm Beach Post", date:"Oct 2024", url:"#" },
-  { headline:"5,000 people, one beach, and a rescue that took 20 minutes", brief:"A routine summer Saturday at Singer Island turned into a mass casualty response.", lede:"Lifeguard Tomás Reyes saw the rip current before the swimmers did. He was already running.", topics:['goodnews','liveblog'], publication:"The Palm Beach Post", date:"Jul 2025", url:"#" },
-  { headline:"Palm Beach County food pantry closes after 40 years — then readers save it", brief:"After a story ran on a Tuesday, donations poured in. By Friday, they'd raised more than $60,000.", lede:"Patricia had already started packing the shelves into boxes when the phone rang for the thirty-seventh time that morning.", topics:['goodnews'], publication:"The Palm Beach Post", date:"Nov 2025", url:"#" },
+  {
+    "headline": "Hope for the holidays: 100 children get their wish",
+    "brief": "Santa swapped his sleigh for a police cruiser and drove to Northeast Pennsylvania to visit with the children of fallen officers.",
+    "lede": "The hotel dining room looked grand but deserted. Only half-eaten dinner plates remained at each table, courtesy of the children who'd abandoned them just a minute earlier. They stood outside now, peering around their parents' legs at the empty stretch of road before them. Santa Claus was coming.",
+    "topics": [
+      "goodnews"
+    ],
+    "publication": "The Pocono Record",
+    "date": "Dec. 17, 2021",
+    "url": "articles/hope-for-the-holidays-100-children-get-their-wish.html",
+    "inLedeRoulette": false
+  }
 ];
+const topics  = [{"id":"courts","label":"Courts"},{"id":"crime","label":"Crime"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"celebrity","label":"Celebrity"},{"id":"liveblog","label":"Live Blog"},{"id":"disasters","label":"Natural Disasters"},{"id":"goodnews","label":"Good News"}];
+const expandedTopics = [];
+const publications = ["The New York Times","Associated Press","USA Today","The Palm Beach Post","The Miami Herald","The Orlando Sentinel"];
 
 // Publications
 (function(){
   const grid = document.getElementById('pubGrid');
-  publications.forEach((name,i) => {
+  publications.forEach((name, i) => {
     const span = document.createElement('span');
     span.className = 'pub-name';
     span.textContent = name;
     grid.appendChild(span);
-    if (i < publications.length-1) {
+    if (i < publications.length - 1) {
       const dot = document.createElement('span');
       dot.className = 'pub-dot';
       dot.textContent = '◆';
@@ -193,59 +176,110 @@ const stories = [
 })();
 
 // Lede roulette
+const ledeStories = stories.filter(s => s.inLedeRoulette && s.lede);
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-let ledeQueue = shuffle(stories.map((_,i)=>i));
+let ledeQueue = ledeStories.length ? shuffle(ledeStories.map((_,i)=>i)) : [];
 let ledePos = 0;
 function nextLede(){
-  if(ledePos>=ledeQueue.length){ledeQueue=shuffle(stories.map((_,i)=>i));ledePos=0;}
-  const story=stories[ledeQueue[ledePos++]];
+  if(!ledeQueue.length) return;
+  if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}
+  const story=ledeStories[ledeQueue[ledePos++]];
   const textEl=document.getElementById('ledeText');
   const sourceEl=document.getElementById('ledeSource');
   textEl.classList.add('fading');sourceEl.classList.add('fading');
   setTimeout(()=>{
-    textEl.textContent='\u201C'+story.lede+'\u201D';
+    textEl.textContent='“'+story.lede+'”';
     sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;
     document.getElementById('ledeReadBtn').href=story.url;
     textEl.classList.remove('fading');sourceEl.classList.remove('fading');
   },240);
 }
 document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
-nextLede();
+if(ledeQueue.length) nextLede();
 
-// Topics
+// Topic selector
+let activeTopicId = null;
 function renderTopics(){
-  const grid=document.getElementById('topicGrid');
-  topics.forEach(topic=>{
-    const btn=document.createElement('button');
-    btn.className='topic-btn';
-    btn.innerHTML=`<span>${topic.label}</span>`;
-    btn.addEventListener('click',()=>{
-      const isActive=btn.classList.contains('active');
-      document.querySelectorAll('.topic-btn').forEach(b=>b.classList.remove('active'));
+  const grid = document.getElementById('topicGrid');
+  topics.forEach(topic => {
+    const btn = document.createElement('button');
+    btn.className = 'topic-btn';
+    btn.innerHTML = '<span>'+topic.label+'</span>';
+    btn.addEventListener('click', () => {
+      const isActive = btn.classList.contains('active');
+      document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));
+      activeTopicId = null;
       if(isActive){
         document.getElementById('storiesSection').classList.remove('visible');
       } else {
         btn.classList.add('active');
-        selectTopic(topic);
+        activeTopicId = topic.id;
+        selectTopic(topic.id, topic.label);
       }
     });
     grid.appendChild(btn);
   });
+
+  // Browse all button
+  if(expandedTopics.length){
+    const browseBtn = document.createElement('button');
+    browseBtn.className = 'topic-btn browse-btn';
+    browseBtn.innerHTML = '<span>Browse all topics ▾</span>';
+    browseBtn.addEventListener('click', () => {
+      const panel = document.getElementById('expandPanel');
+      const open = panel.classList.toggle('open');
+      browseBtn.querySelector('span').textContent = open ? 'Hide topics ▴' : 'Browse all topics ▾';
+      if(open && !panel.innerHTML){
+        const groups = {};
+        expandedTopics.forEach(t => {
+          const g = t.group || 'topics';
+          if(!groups[g]) groups[g] = [];
+          groups[g].push(t);
+        });
+        const groupLabels = {people:'People & Cases',topics:'Topics',format:'Format',featured:'Featured'};
+        Object.keys(groups).forEach(g => {
+          const lbl = document.createElement('div');
+          lbl.className = 'expand-group-label';
+          lbl.textContent = groupLabels[g] || g;
+          panel.appendChild(lbl);
+          const row = document.createElement('div');
+          row.className = 'expand-tags';
+          groups[g].forEach(t => {
+            const tag = document.createElement('button');
+            tag.className = 'expand-tag';
+            tag.textContent = t.label;
+            tag.addEventListener('click', () => {
+              document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));
+              tag.classList.add('active');
+              activeTopicId = t.id;
+              selectTopic(t.id, t.label);
+            });
+            row.appendChild(tag);
+          });
+          panel.appendChild(row);
+        });
+      }
+    });
+    grid.appendChild(browseBtn);
+  }
 }
 
-function selectTopic(topic){
-  const filtered=stories.filter(s=>s.topics.includes(topic.id));
-  const section=document.getElementById('storiesSection');
+function selectTopic(id, label){
+  const filtered = stories.filter(s => s.topics.includes(id));
+  const section = document.getElementById('storiesSection');
   section.classList.add('visible');
-  document.getElementById('storiesTopicLabel').textContent=topic.label;
-  document.getElementById('storiesCount').textContent=`${filtered.length} stor${filtered.length===1?'y':'ies'}`;
-  const grid=document.getElementById('storyGrid');
-  grid.innerHTML='';
-  filtered.forEach(story=>{
-    const a=document.createElement('a');
-    a.href=story.url;
-    a.className='story-card';
-    a.innerHTML=`<div class="story-meta">${story.publication}&nbsp;·&nbsp;${story.date}</div><div class="story-headline">${story.headline}</div><div class="story-brief">${story.brief}</div><span class="story-arrow">↗</span>`;
+  document.getElementById('storiesTopicLabel').textContent = label;
+  document.getElementById('storiesCount').textContent = filtered.length+' stor'+(filtered.length===1?'y':'ies');
+  const grid = document.getElementById('storyGrid');
+  grid.innerHTML = '';
+  filtered.forEach(story => {
+    const a = document.createElement('a');
+    a.href = story.url;
+    a.className = 'story-card';
+    a.innerHTML = '<div class="story-meta">'+story.publication+' · '+story.date+'</div>'
+      +'<div class="story-headline">'+story.headline+'</div>'
+      +'<div class="story-brief">'+story.brief+'</div>'
+      +'<span class="story-arrow">↗</span>';
     grid.appendChild(a);
     void a.offsetWidth;
   });
