@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Natural Disasters · Environment</span>
+  </div>
+  <h1 class="article-headline">'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels</h1>
+
+  <div class="article-deck">Hurricane Milton sent thousands of Florida's Gulf Coast residents scrambling for shelter inland.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Sept. 30, 2022</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://www.palmbeachpost.com/gcdn/presto/2022/09/28/NPPP/6b99c78c-6fdb-44f2-b521-f60a9323f170-20220928_jup_ian_beach_009.JPG?width=1320&amp;height=880&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="Sally Fieni watches news coverage of Hurricane Ian in the lobby of a Marriott hotel in Palm Beach Gardens on Sept. 28, 2022. She and her husband, Fred Fieni, evacuated to Palm Beach County ahead of the storm.">
+      <div class="article-media-caption"><span>Sally Fieni watches news coverage of Hurricane Ian in the lobby of a Marriott hotel in Palm Beach Gardens on Sept. 28, 2022. She and her husband, Fred Fieni, evacuated to Palm Beach County ahead of the storm.</span><span class="media-credit">Photo by Thomas Cordy/The Palm Beach Post</span></div>
+    </div>
+
+    <p>The calls from the Gulf Coast started Monday, the voices on the other line anxious.</p>
+
+    <p>How close to the water are you? they asked. Hotel staff wrote down callers' information while wind battered the lobby doors. Can the dog come?</p>
+
+    <p>People were frantic, said Mike Kelly, general manager of the Hilton Garden Inn across from the Palm Beach Outlets in West Palm Beach. Rooms sold out fast.</p>
+
+    <p>He answered each call, greeting the guests when they arrived at the hotel hours later, some lugging suitcases and others with nothing but their families in tow.</p>
+
+    <p>&quot;The roads from Tampa and Fort Myers and Naples must have been very busy between there and here,&quot; Kelly said Thursday.</p>
+
+    <h2>Palm Beach County became a temporary home for many Florida residents</h2>
+
+    <p>Palm Beach County became a temporary home for many Florida residents fleeing Hurricane Ian this week. As the first wave of evacuees returns home, a second has taken its place, uprooted by the destruction carved out along the state's southwest coast.</p>
+
+    <p>&quot;We've been inundated. It's been nonstop for three days now,&quot; Cathy Balestriere, general manager of Crane's Beach House Boutique Hotel and Luxury Villas in Delray Beach, said Thursday.</p>
+
+    <p>&quot;I think as the day unfolds, and into the next 24, 48 hours, we're going to see the aftermath of it,&quot; she said. &quot;And it's not going to be good.&quot;</p>
+
+    <h2>Relief to ruin: Mood sobers as Ian's destruction becomes known</h2>
+
+    <p>Many who fled their homes before Ian's landfall left everything behind but their pets, Balestriere said. They arrived early in the week in good spirits, relieved for a place to wait out the storm.</p>
+
+    <p>But those who stood at the front desk Thursday, in the wake of Ian's path, did so beleaguered and devastated, the manager said. One young woman told Balestriere that her calls to friends and family who stayed behind in Naples had gone unanswered.</p>
+
+    <p>While some slowly make their way back home to assess the damage, others who booked two or three days are scrambling to extend their stay.</p>
+
+    <p>The booking list is ever-changing, Balestriere said. Dogs and cats now occupy many of the hotel's 28 apartment-style suites, and though each one comfortably fits six people, Balestriere suspects there are some with air mattresses and extended family members crammed into every available space.</p>
+
+    <p>&quot;We're not questioning that. We know how hard this is,&quot; she said.</p>
+
+    <p>Her mind was on her own daughter, who hunkered down at the University of Central Florida in Orlando as Ian loomed larger.</p>
+
+    <h2>Palm Beach County reports limited vacancies in area hotels</h2>
+
+    <p>Discover The Palm Beaches, the county's tourism department, compiled a loose database Wednesday of nearly 140 local hotels' availability. As of Friday, 69 percent reported having limited or no vacancies through Sunday.</p>
+
+    <p>&quot;It's madness. It really is,&quot; said an employee at La Quinta in Jupiter, who manned the front desk Thursday — her day off. The employee, who did not want to give her name, said the weather made for short-staffed nights at the hotel, though its booking list was bloated.</p>
+
+    <p>Alex Cruz, the 34-year-old behind the front desk at the Best Western Plus in Boca Raton, said a line stretched from one end of the lobby to the other Wednesday night. Guests checked in with hollow voices, many asking for toothpaste and combs and other things they'd forgotten back home.</p>
+
+    <blockquote>
+      <p>&quot;They came with nothing,&quot; Cruz said. &quot;Some were saying they don't know how long they're going to have to be here. They may not even know if they have a house to come back to.&quot;</p>
+    </blockquote>
+
+    <p>He worked quickly to check them in, turning from the computer to the telephone as it rang off the hook. It's never easy to turn people away, he said. But with the last room booked, he had to.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>Sept. 30, 2022</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
