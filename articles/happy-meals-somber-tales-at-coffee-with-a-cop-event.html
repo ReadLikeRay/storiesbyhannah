@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Meals, somber tales at 'Coffee with a Cop' event — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Pocono Record</span>
+    <span class="kicker-dot">◆</span>
+    <span>Community</span>
+  </div>
+  <h1 class="article-headline">Happy Meals, somber tales at 'Coffee with a Cop' event</h1>
+
+  <div class="article-deck">Once it was the promise of free donuts that enticed police to their local diners. Now it's the hope of rebuilding trust.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Nov. 6, 2021</span>
+  </div>
+  <div class="article-body">
+
+    <p>A state trooper dropped to his knees and sat eye-to-eye with the little boy before him.</p>
+
+    <p>&quot;What do you want to be when you grow up?&quot; trooper David Peters asked. The toddler clutched a McDonald's Happy Meal toy in his hand and said nothing. &quot;You're going to be a superhero, right? I'm still trying to figure it out myself.&quot;</p>
+
+    <p>Peters has short gray hair and a frequent, cheeky smile. Later, he'd say there's no personality test to become a police officer, but if there were, he'd pass with flying colors. He's affable and animated, and people paused to watch him joke with three small children near the McDonald's soda fountain.</p>
+
+    <p>The oldest, Aurora, wore a pink skirt and a jacket zipped up to her chin. Peters spoke to her over the sounds of her brother and sister, who flew plastic superheroes at the table next to them. What do you want to be, he asked. A princess?</p>
+
+    <p>&quot;A cop,&quot; Aurora said, and Peters smiled wider.</p>
+
+    <p>Interactions like these are why Peters helped organize &quot;Coffee with a Cop&quot; in Marshalls Creek Wednesday morning. It's part of the Pennsylvania State Police's growing community-outreach effort, aimed at building better relationships between police and the public. It's an opportunity for newer troopers to practice talking to people, too.</p>
+
+    <p>&quot;How you talk to somebody can make all the difference in the world as to how you're perceived,&quot; Peters said.</p>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/15c2fd69-cf02-436e-8cf9-ce0f5495515c-IMG_2201.JPG?width=1320&amp;height=916&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="Clarissa Allen plays with Trooper Alex Rankovich. Rankovich studied math and engineering at Penn State University before graduating from police academy in 2019.">
+      <div class="article-media-caption">
+        <span>Clarissa Allen plays with Trooper Alex Rankovich. Rankovich studied math and engineering at Penn State University before graduating from police academy in 2019.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <p>Peters, three young troopers and a corporal posed for photos with the children — their mother urging the littlest to face the camera — and bid them goodbye when they left. Passersby helped themselves to free coffee over the next hour and a half but rarely stayed long enough to speak with the police. In their absence, the troopers leaned against the condiment counter and shared stories from their time on the job.</p>
+
+    <p>Like the day they were tased and pepper sprayed as part of police academy training. The spray is worse than the taser, said trooper Nick Sully — it sticks to you like glue. It's like being slammed against concrete, then lit on fire. Sully won't use it on anyone.</p>
+
+    <p>Another story, then; the time an elementary schooler said &quot;don't shoot&quot; when trooper Alex Rankovich visited his classroom. Comments like these come up during games of kickball on the school playground, Rankovich said, and they feel worse than the pepper spray.</p>
+
+    <p>Peters nodded. If it isn't suspicion or distrust coloring a student's voice, it's a morbid curiosity, he said. He's heard one question in particular repeated enough times during school visits that he no longer gives students a chance to ask it.</p>
+
+    <p>&quot;No,&quot; Peters says firmly, before anyone opens their mouth. No, he hasn't ever shot someone, and no one has shot him, either.</p>
+
+    <p>Kids are hungry for the kinds of details he won't even share with his family. They think of police as the harbingers of violence and death, said Corporal Ashleigh Kilner, but most are just overworked.</p>
+
+    <p>They're called to play the role of the marriage counselor, the grief counselor, the child custody attorney and social worker — to &quot;know everything and be everything,&quot; Kilner said — much more frequently than they're called to use force.</p>
+
+    <blockquote>
+      <p>&quot;We got to play by the rules when nobody else does,&quot; Peters added. [PQ]</p>
+    </blockquote>
+
+    <p>The troopers swayed on their feet and sometimes leaned against tables, but they rarely ever sat down. People paused when they stepped inside the McDonald's and saw them there, arms folded above their weapons belt.</p>
+
+    <p>&quot;Is this OK?&quot; a woman asked. She hurried across the floor to the cash register. Another man surveyed the scene and laughed: &quot;Got any donuts?&quot; he said.</p>
+
+    <p>Conversation turned to the troopers' wardrobe: a gray button-down shirt, black necktie and dress pants.</p>
+
+    <p>&quot;Does the tie get in the way?&quot; a McDonald's employee asked. Sometimes, troopers said.</p>
+
+    <p>The same employee pushed her finger against one of the trooper's shirts and exclaimed at the hard-plated protective vest she felt beneath it.</p>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <p>&quot;That's just his chest,&quot; another trooper said.</p>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/presto/2021/11/04/NPOR/9a002f6d-9c56-4189-9036-914da894df9a-IMG_2179.JPG?width=1320&amp;height=1034&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.">
+      <div class="article-media-caption">
+        <span>J Declan plays with a trooper Sam Falcone during Coffee with a Cop in Marshalls Creek. Falcone left the event early to respond to a call.</span>
+        <span class="media-credit">Photo by Hannah Phillips</span>
+      </div>
+    </div>
+
+    <p>They joked easily when the conversation allowed it and grew serious when it didn't.</p>
+
+    <p>Peters recalled the first time he told someone their loved one had died. She was a mother, Peters said, and he can't forget the sound of her scream. He described the trauma and shock of having to relay details of his colleague's death to inquiring journalists following the fatal shootout that killed Trooper Joshua Miller in 2009.</p>
+
+    <p>Kilner talked about a growing dependence on state police in areas where local police are under-resourced. Troopers' responsibilities are growing, Kilner said, but the pool of applicants vying for a spot among them is not.</p>
+
+    <p>Sully and Rankovich belonged to that applicant pool fewer than two years ago. Sully was a teacher for children with special needs before he attended police academy, and Rankovich studied engineering at Penn State. Both agreed that the police force they joined is different than that of Kilner and Peters' time.</p>
+
+    <p>Every action is second-guessed now, Sully said. It's a thought that nags in the back of his mind each time he responds to a call:</p>
+
+    <blockquote>
+      <p>&quot;Am I going to be the next one on the news?&quot;</p>
+    </blockquote>
+
+    <p>Viral incidents of police misconduct, demands for reform and heightened scrutiny are all part of why Peters, Kilner, Rankovich and Sully spent hours at McDonald's Wednesday.</p>
+
+    <p>None denied that bad police exist — &quot;If it's deserved, it's deserved,&quot; Sully said of police prosecution — but their goal is to foster better relationships with the community through positive encounters and candid conversation.</p>
+
+    <p>Health concerns throughout the pandemic prevented many events like Wednesday's from taking place, but they have slowly begun to resume.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Pocono Record</strong> on <strong>Nov. 6, 2021</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
