@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Man created an online sanctuary for pedophiles and predators — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Court</span>
+  </div>
+  <h1 class="article-headline">Man created an online sanctuary for pedophiles and predators</h1>
+
+  <div class="article-deck">Bill Spearman said he had no interest in children but chose to run the website &quot;because he enjoyed the management aspect of it.&quot;</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Feb. 12, 2024</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://www.gannett-cdn.com/presto/2021/07/01/PNJM/614efb99-9db6-4de9-bc38-b1020a1949e4-GettyImages-1218819085.jpg" alt="">
+      <div class="article-media-caption"><span></span><span class="media-credit"></span></div>
+    </div>
+
+    <p>Bill Spearman ran a website where predators and pedophiles could indulge their worst impulses with impunity. Over five years, the site grew into a sprawling empire dedicated to the rape and abuse of children.</p>
+
+    <p>Spearman continued to manage the site even after his second-in-command, a 69-year-old Boynton Beach man named Selwyn Rosenstein, went offline during the summer of 2022. Rosenstein’s arrest was the first of many targeting high-ranking members of the site: a man in Nevada, two in Washington, a fourth in Tennessee and one in North Carolina.</p>
+
+    <p>In November 2022, federal agents came for Spearman, too.</p>
+
+    <p>Spearman, the FBI's &quot;most wanted child-pornography offender in the world,&quot; oversaw one of the largest collections of child pornography on the dark web. Investigators raided his home in Alabama and searched his laptops, where they say Spearman spent much of his time barking orders at the site’s highest-ranking administrators.</p>
+
+    <p>Assistant U.S. Attorney Greg Schiller called Spearman's website “a sanctuary and playground for enthusiasts of child rape and abuse,” where its thousands of users exchanged videos of children as young as infants. Members categorized the videos with tags including “rape,” “torture,” “crying,” “strangle” and “screaming.”</p>
+
+    <p>Many images, the prosecutor said, included boys the same age as Spearman's own 8-year-old son.</p>
+
+    <h2>Decadeslong sentences in child-porn case amount to life in prison</h2>
+
+    <p>According to investigators, the site was designed to keep its users anonymous and undetectable by authorities. Using online aliases “Enforcer” and “King Pedo,” Spearman put rules in place that encouraged lower-ranking users to rise through the hierarchy by posting more child sexual abuse material and demoted those who didn’t.</p>
+
+    <p>Spearman told investigators he had no sexual interest in children and chose to run the website simply “because he enjoyed the management aspect of it.”</p>
+
+    <p>Rosenstein, the second-highest ranking member of the site, said he didn't think that exchanging child pornography was harmful &quot;because the harmful acts have already taken place.&quot; He said websites like the one Spearman ran are a matter of “freedom” and are &quot;essential for people to express themselves.&quot;</p>
+
+    <p>Rosenstein pleaded guilty to seven counts related to the advertisement and distribution of child pornography. Cannon sentenced him in December 2022 to 28 years in federal prison. She imposed similar sentences to other high-ranking members who have since pleaded guilty.</p>
+
+    <p>For these men, who ranged in age from 69 to 75 at the time of their arrest, the penalties are effectively life sentences.</p>
+
+    <h2>Child-porn site leader agreed to plea deal on eve of trial</h2>
+
+    <p>Spearman maintained his &quot;not guilty&quot; plea until the eve of his trial. Potential jurors had already spent two hours answering questions about their experiences enduring sexual abuse and viewing child pornography by the time Spearman's public defender, Scott Berry, and Schiller made a deal.</p>
+
+    <p>On the condition that he be allowed to appeal his conviction, Spearman pleaded guilty to one count of engaging in a child-exploitation enterprise. Prosecutors dropped the remaining charges against him.</p>
+
+    <p>Though Schiller recommended Spearman be sentenced to life in prison for exploiting &quot;a literally uncountable number of children,&quot; U.S. District Judge Aileen Cannon had the final say. During a sentencing hearing on Jan. 22, Berry described Spearman's extensive military history in hopes of persuading her in a different direction.</p>
+
+    <p>Spearman enlisted in the army at 17, Berry said, and continued to serve for more than two decades. Responsible for detecting acts of espionage, sabotage and terrorism, he worked with the FBI surveilling individuals linked to terrorists post-9/11. He also commanded soldiers in the wake of a deadly truck-bombing in Saudi Arabia and fought in the Persian Gulf during Operation Desert Storm.</p>
+
+    <blockquote>
+      <p>“The bulk of the defendant’s service to his country is admirable,” Schiller countered. “But it does not outweigh the enormity of his crimes.”</p>
+    </blockquote>
+
+    <p>Cannon, who is also overseeing the classified documents case against former President Donald Trump, agreed. She sentenced him to life in prison.</p>
+
+    <p>In the wake of his sentencing, certain documents in Spearman's case have become unsealed. One suggests that many of the site’s users have not been identified. Others that have been identified — fully, or in part — have not yet been arrested. The FBI's investigation remains ongoing.</p>
+
+    <p>Meanwhile, Spearman is poised to fight his conviction from prison. Berry filed a notice on Jan. 29 that Spearman appealed his life sentence to the 11th Circuit U.S. Court of Appeals.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>Feb. 12, 2024</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
