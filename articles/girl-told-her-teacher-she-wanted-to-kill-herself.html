@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A girl told her teacher she wanted to kill herself. He let her buy the rope to do it. — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Enterprise</span>
+  </div>
+  <h1 class="article-headline">A girl told her teacher she wanted to kill herself. He let her buy the rope to do it.</h1>
+
+  <div class="article-deck">'We’re talking about not only a sexual predator, but someone who played a key role in trying to get her killed,' the girl's attorney said.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">April 23, 2025</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://s.yimg.com/ny/api/res/1.2/COtntSmC8veekY1mAnFT3g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MDtjZj13ZWJw/https://media.zenfs.com/en/palm_beach_post_natl_articles_437/adb3bdd8b6c0e3e4023ce8b416783b3f" alt="Damian Conti, accused of sexually abusing his student and aiding in her suicide attempt, appears at the Palm Beach County Courthouse.">
+      <div class="article-media-caption"><span>Damian Conti, accused of sexually abusing his student and aiding in her suicide attempt, appears at the Palm Beach County Courthouse.</span><span class="media-credit">Photo by Hannah Phillips/The Palm Beach Post</span></div>
+    </div>
+
+    <p>Investigators say the South Florida teacher accused of having sex with a student did more than groom and abuse her. According to court records, he also made a suicide pact with the 16-year-old girl and accompanied her to a hardware store where she picked out a rope to hang herself.</p>
+
+    <p>Palm Beach County sheriff’s deputies found the teenager hanging from a tree behind a church less than an hour later. Deputies cut the rope and resuscitated her before taking her to the pediatric intensive care unit of St. Mary's Medical Center in West Palm Beach, where she slowly recovered.</p>
+
+    <p>“We’re not only talking about a sexual predator, but someone who aided and abetted her suicide attempt,” said her attorney, Victoria Mesa-Estrada. &quot;She committed suicide. She's alive by miracle.&quot;</p>
+
+    <p>Initially charged with several counts of unlawful sexual activity with a child, former AP English teacher Damian Conti, 36, now faces an additional count of attempting to assist in self-murder. Prosecutors added the charge on April 16, months after suggesting in an email to Conti's attorney that an attempted murder charge may be pending.</p>
+
+    <p>&quot;This case is much more than just the sexual abuse of a minor by a teacher,&quot; Assistant State Attorney Alexa Ruggiero told Assistant Public Defender Lily Boehmer in an email made public this month. &quot;Some of the most upsetting evidence includes the defendant taking this young girl to the store to buy materials to end her life.&quot;</p>
+
+    <p>Conti, who was seen accompanying the student at Home Depot where she picked out 30 feet of rope and 15 feet of chain, has pleaded not guilty to the charges against him. He is represented by the Office of the Public Defender, which, as a policy, does not comment on open cases.</p>
+
+    <h2>AP English teacher groomed and isolated student, investigators say</h2>
+
+    <p>Documents and body-camera videos provided by the State Attorney's Office this month contain grim new details about the allegations that gave rise to the former AP English teacher's arrest on Feb. 6.</p>
+
+    <p>According to investigators, Conti began communicating with the student over school email, text and Instagram in August 2023.</p>
+
+    <p>He offered to serve as the girl's academic mentor and created after-school meetups near her locker, where he greeted her every day. Attorneys for the girl's family said he gave her driving lessons and met her at Starbucks for coffee. He sometimes visited her where she worked, his 4-year-old son in tow.</p>
+
+    <p>He gave her gifts and encouraged her to join the volleyball club he coached.</p>
+
+    <p>By the end of the first quarter, investigators say he had begun creating excuses to remove her from volleyball practice and take her into his classroom alone. The student said he confided in her about his work and home life and encouraged her to vent her own frustrations. As their trust deepened, he began sharing intimate secrets about his marriage and sex life.</p>
+
+    <p>The girl said Conti told her he &quot;liked her&quot; in October 2023. She said he then began to assault her sexually — first in a shopping plaza parking lot, then in his classroom and in storage closets on SouthTech's campus in Boynton Beach.</p>
+
+    <p>Conti's behavior, flagrant enough to start rumors among students, earned an emailed warning from a school administrator in January 2024, according to school records.</p>
+
+    <p>&quot;I want to remind you that you should not be transporting students in your car,&quot; assistant principal Erin Kurtz wrote, after a video of the girl stepping into Conti's car began to circulate on TikTok. &quot;If you are transporting them for a field trip, the appropriate paperwork should be on file and there should always be a minimum of 3 people.&quot;</p>
+
+    <p>Both Conti and the girl told deputies their last sexual encounter occurred on Feb. 5, 2024 — the same day as his wedding anniversary, according to the divorce paperwork his wife filed three weeks later.</p>
+
+    <h2>Classmate discovered texts between student and West Palm Beach teacher, alerted principal</h2>
+
+    <p>On Feb. 6, 2024, a classmate who shared access to one of the girl's online accounts said he wanted to “mess with her” by logging into her Instagram. It was also a chance to see whether she was “talking smack” about him to friends, he said.</p>
+
+    <p>“Lo and behold, she was talking smack about me,” he told a deputy.</p>
+
+    <p>The boy said he scrolled through her conversations during his first-period class and noticed one “curious” message after another, between the student and an account appearing to belong to Conti. The boy took screenshots and shared them with school administrators.</p>
+
+    <p>Eileen Turenne, SouthTech's then-principal, suspended Conti upon seeing the messages and summoned the girl to the front office. At about the same time, the girl said she began receiving texts from Conti, instructing her to delete their messages. She did.</p>
+
+    <p>In the office, the girl said she ignored the principal’s questions and asked for an attorney. She said Turenne asked her to leave campus without notifying her parents about Conti's suspension or the reason behind it.</p>
+
+    <p>According to court records, a SouthTech receptionist asked Turenne over a walkie-talkie to confirm that the student should be released from campus without her parents' signature.</p>
+
+    <p>&quot;Yes. Get her out of here,&quot; attorneys said Turenne answered.</p>
+
+    <p>The receptionist asked again whether Turenne had written or verbal consent from the girl's parents, as was required by school policy.</p>
+
+    <p>&quot;I will deal with it later,&quot; Turenne said, according to court records. &quot;Just tell (Jane Doe) to sign on behalf of her parent.&quot;</p>
+
+    <p>The next time her parents saw their daughter was hours later in the emergency room. Intubated and comatose, she appeared in such grave condition that a deputy said her mother nearly fainted when she saw her.</p>
+
+    <p>Turenne, who retired from SouthTech three days later, did not return a request for comment.</p>
+
+    <blockquote>
+      <p>&quot;The school waited for the water to spill before they took any action to protect her,&quot; Mesa-Estrada said. &quot;And when they pushed her out, they basically turned her into the hands of the predator.&quot;</p>
+    </blockquote>
+
+    <p>After leaving SouthTech, the girl met Conti at a Home Depot near Lake Worth Beach. In-store surveillance cameras recorded Conti as he accompanied the student through the store.</p>
+
+    <p>She picked out 30 feet of rope and 15 feet of chain, and told an employee she was building a tree house. She told Conti it was for the both of them to commit suicide.</p>
+
+    <p>Conti was hesitant. The girl said he touched the rope, said he was “scared of death” and told his student repeatedly not to kill herself. According to court records, he stood with her at the self-checkout while she bought the rope. The pair then walked out of the store together and “went their separate ways.”</p>
+
+    <p>Conti told deputies later that he called his therapist and asked what he should do. The therapist told him to hang up and call 911. He did.</p>
+
+    <p>That call triggered a 30-minute search for the girl. Deputies found her hanging from a rope behind a nearby church with the help of her parents, who tracked her location through their phone.</p>
+
+    <h2>Despite evidence against him, fired SouthTech teacher maintains his innocence</h2>
+
+    <p>Deputies arrested Conti on Feb. 6, 2024, after he admitted that his sexual relationship with the girl, and his suspension from school because of it, precipitated her suicide attempt.</p>
+
+    <blockquote>
+      <p>“There was feelings that shouldn’t have been there,” he told the arresting deputy. “I should have stopped it.”</p>
+    </blockquote>
+
+    <p>SouthTech fired Conti the following day.</p>
+
+    <p>In addition to his admission of performing sex acts on the girl, investigators uncovered thousands of messages between the teacher and student, many of which the lawyers said contained &quot;highly inappropriate and/or explicit sexual content.&quot;</p>
+
+    <p>During a hearing in October, prosecutors offered the former teacher a chance to plead guilty in exchange for a 25-year prison sentence — a fraction of the penalty he’ll face if he maintains his innocence and is convicted at trial. Conti rejected the offer. He rejected a 10-year offer before that one, too.</p>
+
+    <p>His refusal put his case on track for a jury trial scheduled to begin June 23.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>April 23, 2025</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
