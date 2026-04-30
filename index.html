@@ -43,20 +43,8 @@
   .headline-item:hover .headline-text{color:var(--accent);}
   .headline-beat{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);flex-shrink:0;min-width:100px;}
   .headline-text{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;line-height:1.3;color:var(--ink);}
-  .lede-section{margin:0 4rem 4rem;border:1.5px solid var(--ink);padding:3rem 3.5rem;position:relative;background:var(--cream);}
-  .lede-section::before{content:'❧';position:absolute;top:-0.95rem;left:3rem;background:var(--cream);padding:0 0.6rem;font-size:1.1rem;color:var(--accent);}
-  .lede-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.75rem;}
-  .lede-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:400;font-style:normal;line-height:1.7;color:var(--ink);min-height:4.5rem;transition:opacity 0.22s ease;}
-  .lede-text.fading{opacity:0;}
-  .lede-source{margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);transition:opacity 0.22s ease;}
-  .lede-source.fading{opacity:0;}
-  .lede-actions{margin-top:2rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
-  .btn-read{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--paper);background:var(--ink);border:1.5px solid var(--ink);padding:0.65rem 1.5rem;cursor:pointer;text-decoration:none;transition:background 0.15s ease,border-color 0.15s ease;display:inline-block;}
-  .btn-read:hover{background:var(--accent);border-color:var(--accent);}
-  .btn-again{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink);background:transparent;border:1.5px solid var(--rule);padding:0.65rem 1.5rem;cursor:pointer;transition:border-color 0.15s ease;display:flex;align-items:center;gap:0.5rem;}
-  .btn-again:hover{border-color:var(--ink);}
-  .btn-again .spin{display:inline-block;transition:transform 0.45s ease;}
-  .btn-again:hover .spin{transform:rotate(180deg);}
+  .more-btn{font-family:'IBM Plex Mono',monospace;font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;background:transparent;border:1.5px solid var(--rule);color:var(--muted);padding:0.45rem 1rem;cursor:pointer;transition:border-color 0.15s,color 0.15s;}
+  .more-btn:hover{border-color:var(--ink);color:var(--ink);}
   .pub-section{border-top:3px double var(--ink);padding:3rem 4rem;background:var(--cream);}
   .pub-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:2rem;text-align:center;}
   .pub-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0.5rem 0;}
@@ -67,7 +55,7 @@
   footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);}
   footer a{color:var(--muted);text-decoration:none;transition:color 0.15s;}
   footer a:hover{color:var(--accent);}
-  @media(max-width:700px){header,.hero,.clips-section,.more-section,.pub-section,footer{padding-left:1.5rem;padding-right:1.5rem;}.lede-section{margin-left:1.5rem;margin-right:1.5rem;padding:2rem;}.section-divider{margin:0 1.5rem;}.hero-headline{font-size:3rem;}.masthead-right{flex-direction:column-reverse;}}
+  @media(max-width:700px){header,.hero,.clips-section,.more-section,.pub-section,footer{padding-left:1.5rem;padding-right:1.5rem;}.section-divider{margin:0 1.5rem;}.hero-headline{font-size:3rem;}.masthead-right{flex-direction:column-reverse;}}
 </style>
 </head>
 <body>
@@ -82,198 +70,14 @@
 <hr class="section-divider">
 <div class="clips-section">
   <div class="clips-label">Selected work</div>
-  <div class="story-grid">
-    <a class="story-card" href="articles/hope-for-the-holidays-100-children-get-their-wish.html">
-      <div class="story-beat">goodnews</div>
-      <div class="story-meta">The Pocono Record &middot; Dec. 17, 2021</div>
-      <div class="story-headline">Hope for the holidays: 100 children get their wish</div>
-      <div class="story-brief">Santa swapped his sleigh for a police cruiser and drove to Northeast Pennsylvania to visit with the children of fallen officers.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/happy-meals-somber-tales-at-coffee-with-a-cop-event.html">
-      <div class="story-beat">goodnews</div>
-      <div class="story-meta">The Pocono Record &middot; Nov. 6, 2021</div>
-      <div class="story-headline">Happy Meals, somber tales at 'Coffee with a Cop' event</div>
-      <div class="story-brief">Once it was the promise of free donuts that enticed police to their local diners. Now it's the hope of rebuilding trust.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/lose-the-husband-keep-the-money.html">
-      <div class="story-beat">Oddities</div>
-      <div class="story-meta">The Palm Beach Post &middot; Aug. 29, 2023</div>
-      <div class="story-headline">Lose the husband, keep the money? Judges rule in Palm Beach couple's 'insane' breakup</div>
-      <div class="story-brief">With millions on the line and celebrity lawyers on both sides, this is the story of a couple too rich to breakup but too bitter to stay together.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/meet-the-70-year-old-quaalude-queenpin-of-boca-raton.html">
-      <div class="story-beat">Oddities</div>
-      <div class="story-meta">The Palm Beach Post &middot; Sept. 20, 2023</div>
-      <div class="story-headline">Meet the 70-year-old Quaalude queenpin of Boca Raton</div>
-      <div class="story-brief">While caring for her elderly mother, this 70-year-old Boca Raton woman earned more than $1.3 million selling Quaaludes to wealthy neighbors.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/hundreds-flee-hurricane-ian.html">
-      <div class="story-beat">Breaking News</div>
-      <div class="story-meta">The Palm Beach Post &middot; Sept. 30, 2022</div>
-      <div class="story-headline">'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels</div>
-      <div class="story-brief">Evacuees fleeing Hurricane Milton's path along Florida's Gulf Coast flooded inland hotels.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/ex-doctor-owes-100-million.html">
-      <div class="story-beat">Courts</div>
-      <div class="story-meta">The Palm Beach Post &middot; Aug. 28, 2024</div>
-      <div class="story-headline">'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed</div>
-      <div class="story-brief">&quot;He was visibly shocked,&quot; the child's father testified. &quot;He said he'd never seen anything like this.&quot;</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/federal-agents-are-using-the-6-7-meme.html">
-      <div class="story-beat">Oddities</div>
-      <div class="story-meta">The Palm Beach Post &middot; Feb. 3, 2016</div>
-      <div class="story-headline">Federal agents are using the 6-7 meme to catch suspected child predators</div>
-      <div class="story-brief">Undercover agents are repurposing a viral meme to help catch suspected child predators.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/billionaires-bankroll-republican-bid-for-top-prosecutor.html">
-      <div class="story-beat">Politics</div>
-      <div class="story-meta">The Palm Beach Post &middot; Oct. 24, 2024</div>
-      <div class="story-headline">Billionaires bankroll Republican bid for top prosecutor in Trump's home county</div>
-      <div class="story-brief">Republican state attorney candidate Sam Stern has raised a record $1.45 million in his bid to become top prosecutor in Palm Beach County, Florida, with $500,000 coming from Trump-aligned billionaires Thomas Peterffy, John Paulson and Steve Wynn.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/winter-springs-mayor-resignation-reveals-deep-political-cracks.html">
-      <div class="story-beat">Politics</div>
-      <div class="story-meta">Orlando Sentinel &middot; March 22, 2021</div>
-      <div class="story-headline">A mayor’s resignation reveals deep political cracks in this Florida city</div>
-      <div class="story-brief">“I had to be the face of a very rude, very arrogant, very power-hungry group of people,” Charles Lacey said. “I could no longer proudly represent my city.”</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/behind-bars-floridas-prisoners-cheer-bidens-election-victory.html">
-      <div class="story-beat">Politics</div>
-      <div class="story-meta">WUFT News &middot; Nov. 12, 2020</div>
-      <div class="story-headline">Behind bars, Florida’s prisoners cheer Biden’s election victory</div>
-      <div class="story-brief">Florida inmates at facilities statewide said they closely tracked election results, exhaling with relief at Biden's projected win and expressing cautious hope that the president-elect will follow through on pledges to reduce incarceration and address sentencing disparities tied to the 1994 crime bill he championed in Congress.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/son-of-clown-murder-victim-speaks-out.html">
-      <div class="story-beat">Courts</div>
-      <div class="story-meta">The Palm Beach Post &middot; May 5, 2023</div>
-      <div class="story-headline">Son of clown murder victim doesn't think blood is on Sheila Keen-Warren's hands alone</div>
-      <div class="story-brief">Joe Ahrens was 21 in 1990 when someone dressed as a clown shot his mother to death on the
-doorstep of their Wellington home.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/in-stunning-twist-nikolas-cruz-rests-his-case.html">
-      <div class="story-beat">Courts</div>
-      <div class="story-meta">The Palm Beach Post &middot; Sept. 14, 2022</div>
-      <div class="story-headline">In stunning twist, Nikolas Cruz's defense rests its case 40 witnesses early</div>
-      <div class="story-brief">Lawyers for the Parkland school shooter earned a sharp rebuke from the judge after resting their case far sooner than expected.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/doomsday-guns-and-jesus-christ-rod-of-iron-festival.html">
-      <div class="story-beat">Politics</div>
-      <div class="story-meta">USA Today &middot; Oct. 18, 2021</div>
-      <div class="story-headline">Doomsday, guns and Jesus Christ: Inside the ultra-right Rod of Iron Freedom Festival</div>
-      <div class="story-brief">Thousands of people — the avowed champions of faith, family and freedom — came from as far as Florida and Texas to a small town in northeast Pennsylvania for the Rod of Iron Freedom Festival.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a>
-    <a class="story-card" href="articles/epstein-investigation-began-years-earlier-than-believed.html">
-      <div class="story-beat">Enterprise</div>
-      <div class="story-meta">The Palm Beach Post &middot; Feb. 14, 2026</div>
-      <div class="story-headline">Epstein investigation began years earlier than previously believed</div>
-      <div class="story-brief">Palm Beach Police dug through nude photographs in Epstein's trash years before what was believed to be the first investigation.</div>
-      <span class="story-arrow">&#8599;</span>
-    </a></div>
+  <div class="story-grid"><a class="story-card" href="articles/hope-for-the-holidays-100-children-get-their-wish.html"><div class="story-beat">goodnews</div><div class="story-meta">The Pocono Record &middot; Dec. 17, 2021</div><div class="story-headline">Hope for the holidays: 100 children get their wish</div><div class="story-brief">Santa swapped his sleigh for a police cruiser and drove to Northeast Pennsylvania to visit with the children of fallen officers.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/happy-meals-somber-tales-at-coffee-with-a-cop-event.html"><div class="story-beat">goodnews</div><div class="story-meta">The Pocono Record &middot; Nov. 6, 2021</div><div class="story-headline">Happy Meals, somber tales at 'Coffee with a Cop' event</div><div class="story-brief">Once it was the promise of free donuts that enticed police to their local diners. Now it's the hope of rebuilding trust.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/lose-the-husband-keep-the-money.html"><div class="story-beat">Oddities</div><div class="story-meta">The Palm Beach Post &middot; Aug. 29, 2023</div><div class="story-headline">Lose the husband, keep the money? Judges rule in Palm Beach couple's 'insane' breakup</div><div class="story-brief">With millions on the line and celebrity lawyers on both sides, this is the story of a couple too rich to breakup but too bitter to stay together.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/meet-the-70-year-old-quaalude-queenpin-of-boca-raton.html"><div class="story-beat">Oddities</div><div class="story-meta">The Palm Beach Post &middot; Sept. 20, 2023</div><div class="story-headline">Meet the 70-year-old Quaalude queenpin of Boca Raton</div><div class="story-brief">While caring for her elderly mother, this 70-year-old Boca Raton woman earned more than $1.3 million selling Quaaludes to wealthy neighbors.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/hundreds-flee-hurricane-ian.html"><div class="story-beat">Breaking News</div><div class="story-meta">The Palm Beach Post &middot; Sept. 30, 2022</div><div class="story-headline">'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels</div><div class="story-brief">Evacuees fleeing Hurricane Milton's path along Florida's Gulf Coast flooded inland hotels.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/ex-doctor-owes-100-million.html"><div class="story-beat">Courts</div><div class="story-meta">The Palm Beach Post &middot; Aug. 28, 2024</div><div class="story-headline">'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed</div><div class="story-brief">&quot;He was visibly shocked,&quot; the child's father testified. &quot;He said he'd never seen anything like this.&quot;</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/federal-agents-are-using-the-6-7-meme.html"><div class="story-beat">Oddities</div><div class="story-meta">The Palm Beach Post &middot; Feb. 3, 2016</div><div class="story-headline">Federal agents are using the 6-7 meme to catch suspected child predators</div><div class="story-brief">Undercover agents are repurposing a viral meme to help catch suspected child predators.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/billionaires-bankroll-republican-bid-for-top-prosecutor.html"><div class="story-beat">Politics</div><div class="story-meta">The Palm Beach Post &middot; Oct. 24, 2024</div><div class="story-headline">Billionaires bankroll Republican bid for top prosecutor in Trump's home county</div><div class="story-brief">Republican state attorney candidate Sam Stern has raised a record $1.45 million in his bid to become top prosecutor in Palm Beach County, Florida, with $500,000 coming from Trump-aligned billionaires Thomas Peterffy, John Paulson and Steve Wynn.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/winter-springs-mayor-resignation-reveals-deep-political-cracks.html"><div class="story-beat">Politics</div><div class="story-meta">Orlando Sentinel &middot; March 22, 2021</div><div class="story-headline">A mayor’s resignation reveals deep political cracks in this Florida city</div><div class="story-brief">“I had to be the face of a very rude, very arrogant, very power-hungry group of people,” Charles Lacey said. “I could no longer proudly represent my city.”</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/behind-bars-floridas-prisoners-cheer-bidens-election-victory.html"><div class="story-beat">Politics</div><div class="story-meta">WUFT News &middot; Nov. 12, 2020</div><div class="story-headline">Behind bars, Florida’s prisoners cheer Biden’s election victory</div><div class="story-brief">Florida inmates at facilities statewide said they closely tracked election results, exhaling with relief at Biden's projected win and expressing cautious hope that the president-elect will follow through on pledges to reduce incarceration and address sentencing disparities tied to the 1994 crime bill he championed in Congress.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/son-of-clown-murder-victim-speaks-out.html"><div class="story-beat">Courts</div><div class="story-meta">The Palm Beach Post &middot; May 5, 2023</div><div class="story-headline">Son of clown murder victim doesn't think blood is on Sheila Keen-Warren's hands alone</div><div class="story-brief">Joe Ahrens was 21 in 1990 when someone dressed as a clown shot his mother to death on the
+doorstep of their Wellington home.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/in-stunning-twist-nikolas-cruz-rests-his-case.html"><div class="story-beat">Courts</div><div class="story-meta">The Palm Beach Post &middot; Sept. 14, 2022</div><div class="story-headline">In stunning twist, Nikolas Cruz's defense rests its case 40 witnesses early</div><div class="story-brief">Lawyers for the Parkland school shooter earned a sharp rebuke from the judge after resting their case far sooner than expected.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/doomsday-guns-and-jesus-christ-rod-of-iron-festival.html"><div class="story-beat">Politics</div><div class="story-meta">USA Today &middot; Oct. 18, 2021</div><div class="story-headline">Doomsday, guns and Jesus Christ: Inside the ultra-right Rod of Iron Freedom Festival</div><div class="story-brief">Thousands of people — the avowed champions of faith, family and freedom — came from as far as Florida and Texas to a small town in northeast Pennsylvania for the Rod of Iron Freedom Festival.</div><span class="story-arrow">&#8599;</span></a><a class="story-card" href="articles/epstein-investigation-began-years-earlier-than-believed.html"><div class="story-beat">Enterprise</div><div class="story-meta">The Palm Beach Post &middot; Feb. 14, 2026</div><div class="story-headline">Epstein investigation began years earlier than previously believed</div><div class="story-brief">Palm Beach Police dug through nude photographs in Epstein's trash years before what was believed to be the first investigation.</div><span class="story-arrow">&#8599;</span></a></div>
 </div>
 <div class="more-section">
   <div class="more-label">More clips</div>
-  <div class="headline-list">
-    <a class="headline-item" href="articles/live-updates-no-kings-protests-across-palm-beach-county.html">
-      <span class="headline-beat">Breaking News</span>
-      <span class="headline-text">Live updates: 'No Kings' protests across Palm Beach County</span>
-    </a>
-    <a class="headline-item" href="articles/rampage-unlike-any-other-teen-diary.html">
-      <span class="headline-beat">Courts</span>
-      <span class="headline-text">'My rampage would be unlike any other': Teen diary lands man in court a decade later</span>
-    </a>
-    <a class="headline-item" href="articles/could-west-palm-police-have-stopped-ghislaine-maxwell.html">
-      <span class="headline-beat">Enterprise</span>
-      <span class="headline-text">Could West Palm Police have stopped Ghislaine Maxwell in 2001?</span>
-    </a>
-    <a class="headline-item" href="articles/therapist-becomes-star-witness-in-trump-assassination-attemp.html">
-      <span class="headline-beat"></span>
-      <span class="headline-text">Therapist becomes star witness in Trump assassination attempt trial</span>
-    </a>
-    <a class="headline-item" href="articles/how-the-feds-toppled-an-online-empire.html">
-      <span class="headline-beat">Courts</span>
-      <span class="headline-text">Man created an online sanctuary for pedophiles and predators</span>
-    </a>
-    <a class="headline-item" href="articles/boca-manicurist-threatened-donald-trump.html">
-      <span class="headline-beat">Oddities</span>
-      <span class="headline-text">Manicurist who threatened Trump after 'watching too much MSNBC' sent to prison</span>
-    </a>
-    <a class="headline-item" href="articles/loopholes-in-florida-gun-laws.html">
-      <span class="headline-beat">Enterprise</span>
-      <span class="headline-text">These loopholes in Florida's gun laws give felons easy access to firearms</span>
-    </a>
-    <a class="headline-item" href="articles/why-murder-charges-for-drug-dealers-arent-sticking.html">
-      <span class="headline-beat">Analysis</span>
-      <span class="headline-text">First-degree murder charges for drug dealers aren't sticking. Here’s why.</span>
-    </a>
-    <a class="headline-item" href="articles/florida-tracked-every-overdose-death.html">
-      <span class="headline-beat">Analysis</span>
-      <span class="headline-text">Florida tracked every overdose death in 2021. Here's what the data shows.</span>
-    </a>
-    <a class="headline-item" href="articles/how-the-theft-of-a-pocono-bobcat-unfolded.html">
-      <span class="headline-beat">Oddities</span>
-      <span class="headline-text">How the theft of a Pocono bobcat unfolded, as told by the accused</span>
-    </a>
-    <a class="headline-item" href="articles/they-thought-the-stand-your-ground-defense-would-save-them.html">
-      <span class="headline-beat">Analysis</span>
-      <span class="headline-text">They thought the 'stand your ground' defense would save them. Only once did a judge agree.</span>
-    </a>
-    <a class="headline-item" href="articles/father-molested-teen-daughter-after-release.html">
-      <span class="headline-beat"></span>
-      <span class="headline-text">'Unspeakable': Father molested teen daughter after release from prison for infant's death</span>
-    </a>
-    <a class="headline-item" href="articles/the-community-cost-of-a-high-speed-chase.html">
-      <span class="headline-beat">Analysis</span>
-      <span class="headline-text">The community cost of a high-speed police chase in northeast Pennsylvania</span>
-    </a>
-    <a class="headline-item" href="articles/what-20-years-of-crash-data-tells-us-about-driving-in-monroe.html">
-      <span class="headline-beat">Analysis</span>
-      <span class="headline-text">What 20 years of crash data tells us about driving in Monroe County, Pa.</span>
-    </a>
-    <a class="headline-item" href="articles/military-pilot-who-killed-va-hospital-roommate-found-not-gui.html">
-      <span class="headline-beat"></span>
-      <span class="headline-text">Military pilot who killed VA hospital roommate found not guilty by reason of insanity</span>
-    </a>
-    <a class="headline-item" href="articles/if-cuba-falls-desantis-hopes-exiles-leave-florida.html">
-      <span class="headline-beat">Politics</span>
-      <span class="headline-text">If Cuba falls, DeSantis hopes exiles leave Florida, rebuild island</span>
-    </a>
-    <a class="headline-item" href="articles/defense-flatters-golf-legend-jack-nicklaus.html">
-      <span class="headline-beat">Courts</span>
-      <span class="headline-text">Rival lawyers flatter golf legend Jack Nicklaus in defamation trial, say reputation is golden</span>
-    </a>
-    <a class="headline-item" href="articles/away-from-wife-and-kids-man-amassed-worst-collection.html">
-      <span class="headline-beat"></span>
-      <span class="headline-text">Wife of man who bragged about child abuse tells judge: 'I still choose him'</span>
-    </a>
-    <a class="headline-item" href="articles/girl-told-her-teacher-she-wanted-to-kill-herself.html">
-      <span class="headline-beat">Enterprise</span>
-      <span class="headline-text">A girl told her teacher she wanted to kill herself. He let her buy the rope to do it.</span>
-    </a>
-    <a class="headline-item" href="articles/police-deny-ties-to-predator-catcher.html">
-      <span class="headline-beat">Enterprise</span>
-      <span class="headline-text">Police deny ties to predator catcher, but his videos tell a different story</span>
-    </a></div>
-</div>
-<div class="lede-section">
-  <div class="lede-label">Or &mdash; start with a first line</div>
-  <div class="lede-text" id="ledeText"></div>
-  <div class="lede-source" id="ledeSource"></div>
-  <div class="lede-actions">
-    <a class="btn-read" id="ledeReadBtn" href="#" target="_blank">Read the story &nearr;</a>
-    <button class="btn-again" id="ledeAgainBtn"><span class="spin">&circlearrowleft;</span><span>Try another</span></button>
+  <div class="headline-list" id="moreList"></div>
+  <div style="text-align:right;padding:0.75rem 0;">
+    <button class="more-btn" id="moreBtn" style="display:none;">More &rarr;</button>
   </div>
 </div>
 <div class="pub-section">
@@ -285,12 +89,12 @@ doorstep of their Wellington home.</div>
   <p><a href="resume.html">R&eacute;sum&eacute;</a> &nbsp;&middot;&nbsp; Palm Beach, Florida</p>
 </footer>
 <script>
-const ledeStories=[{"headline":"Lose the husband, keep the money? Judges rule in Palm Beach couple's 'insane' breakup","lede":"Abe Haruvi is unhappily married and doing everything he can to stay that way.","publication":"The Palm Beach Post","date":"Aug. 29, 2023","url":"articles/lose-the-husband-keep-the-money.html"},{"headline":"Meet the 70-year-old Quaalude queenpin of Boca Raton","lede":"Federal agents expected a cartel. They instead found Linda Horn, a grandmother with 1.4 grams of a disco-era sedative in her trunk.","publication":"The Palm Beach Post","date":"Sept. 20, 2023","url":"articles/meet-the-70-year-old-quaalude-queenpin-of-boca-raton.html"},{"headline":"'My rampage would be unlike any other': Teen diary lands man in court a decade later","lede":"A Florida high schooler wrote the names of his enemies and how he planned to kill them.","publication":"The Palm Beach Post","date":"Sept. 29, 2023","url":"articles/rampage-unlike-any-other-teen-diary.html"},{"headline":"'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels","lede":"The calls from the Gulf Coast started Monday, the voices on the other line anxious. \"How close to the water are you?\" they asked. Hotel staff wrote down callers' information while wind battered the lobby doors. \"Can the dog come?\"","publication":"The Palm Beach Post","date":"Sept. 30, 2022","url":"articles/hundreds-flee-hurricane-ian.html"},{"headline":"'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed","lede":"Days after the Florida Board of Medicine voted to revoke his medical license, OB-GYN Berto Lopez performed a circumcision anyway. He botched it, severing the child’s penis and adding another name to a long list of patients whose mangled procedures caused the board to pull his license in the first place.","publication":"The Palm Beach Post","date":"Aug. 28, 2024","url":"articles/ex-doctor-owes-100-million.html"},{"headline":"Therapist becomes star witness in Trump assassination attempt trial","lede":"Attorneys prosecuting Donald Trump’s would-be assassin could hope for no better witness than Tommy McGee.","publication":"The Palm Beach Post","date":"Sept. 12, 2025","url":"articles/therapist-becomes-star-witness-in-trump-assassination-attemp.html"},{"headline":"'Unspeakable': Father molested teen daughter after release from prison for infant's death","lede":"With his release from prison imminent, Peter Zayas had a rare opportunity: Atone for the death of his infant daughter by becoming a father to his teenage one. Instead, he victimized her, too.","publication":"The Palm Beach Post","date":"June 4, 2024","url":"articles/father-molested-teen-daughter-after-release.html"},{"headline":"Military pilot who killed VA hospital roommate found not guilty by reason of insanity","lede":"Nurses found a psychiatric patient strangled to death in the bathroom of a Veterans Affairs hospital. On the floor beside him lay a Bible, open to a hand-written note: \"God, I have lived a good life. Take me home.\"","publication":"The Palm Beach Post","date":"March 26, 2025","url":"articles/military-pilot-who-killed-va-hospital-roommate-found-not-gui.html"},{"headline":"Wife of man who bragged about child abuse tells judge: 'I still choose him'","lede":"A man who bragged online about molesting children appeared in court with the full support of his family behind him.","publication":"The Palm Beach Post","date":"Feb. 10, 2025","url":"articles/away-from-wife-and-kids-man-amassed-worst-collection.html"},{"headline":"In stunning twist, Nikolas Cruz's defense rests its case 40 witnesses early","lede":"The judge looked from attorney to attorney flanking Nikolas Cruz and asked them a third time: Who is your next witness?","publication":"The Palm Beach Post","date":"Sept. 14, 2022","url":"articles/in-stunning-twist-nikolas-cruz-rests-his-case.html"},{"headline":"Doomsday, guns and Jesus Christ: Inside the ultra-right Rod of Iron Freedom Festival","lede":"Jesus is not the \"effeminate, castrated\" man taught about at Sunday school, the pastor said. He's an assault weapons manufacturer.","publication":"USA Today","date":"Oct. 18, 2021","url":"articles/doomsday-guns-and-jesus-christ-rod-of-iron-festival.html"},{"headline":"Police deny ties to predator catcher, but his videos tell a different story","lede":"The internet is full of predators. This man wants to meet them.","publication":"The Palm Beach Post","date":"Feb. 6, 2025","url":"articles/police-deny-ties-to-predator-catcher.html"}];
-function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-let ledeQueue=ledeStories.length?shuffle(ledeStories.map((_,i)=>i)):[];let ledePos=0;
-function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent=story.lede;sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
-document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
-if(ledeQueue.length)nextLede();
-</script>
+const restStories=[{"url":"articles/live-updates-no-kings-protests-across-palm-beach-county.html","headline":"Live updates: 'No Kings' protests across Palm Beach County","moods":["breakingnews"]},{"url":"articles/rampage-unlike-any-other-teen-diary.html","headline":"'My rampage would be unlike any other': Teen diary lands man in court a decade later","moods":["courts"]},{"url":"articles/could-west-palm-police-have-stopped-ghislaine-maxwell.html","headline":"Could West Palm Police have stopped Ghislaine Maxwell in 2001?","moods":["enterprise"]},{"url":"articles/therapist-becomes-star-witness-in-trump-assassination-attemp.html","headline":"Therapist becomes star witness in Trump assassination attempt trial","moods":[]},{"url":"articles/how-the-feds-toppled-an-online-empire.html","headline":"Man created an online sanctuary for pedophiles and predators","moods":["courts"]},{"url":"articles/boca-manicurist-threatened-donald-trump.html","headline":"Manicurist who threatened Trump after 'watching too much MSNBC' sent to prison","moods":["oddities"]},{"url":"articles/loopholes-in-florida-gun-laws.html","headline":"These loopholes in Florida's gun laws give felons easy access to firearms","moods":["enterprise"]},{"url":"articles/why-murder-charges-for-drug-dealers-arent-sticking.html","headline":"First-degree murder charges for drug dealers aren't sticking. Here’s why.","moods":["analysis"]},{"url":"articles/florida-tracked-every-overdose-death.html","headline":"Florida tracked every overdose death in 2021. Here's what the data shows.","moods":["analysis"]},{"url":"articles/how-the-theft-of-a-pocono-bobcat-unfolded.html","headline":"How the theft of a Pocono bobcat unfolded, as told by the accused","moods":["oddities"]},{"url":"articles/they-thought-the-stand-your-ground-defense-would-save-them.html","headline":"They thought the 'stand your ground' defense would save them. Only once did a judge agree.","moods":["analysis"]},{"url":"articles/father-molested-teen-daughter-after-release.html","headline":"'Unspeakable': Father molested teen daughter after release from prison for infant's death","moods":[]},{"url":"articles/the-community-cost-of-a-high-speed-chase.html","headline":"The community cost of a high-speed police chase in northeast Pennsylvania","moods":["analysis"]},{"url":"articles/what-20-years-of-crash-data-tells-us-about-driving-in-monroe.html","headline":"What 20 years of crash data tells us about driving in Monroe County, Pa.","moods":["analysis"]},{"url":"articles/military-pilot-who-killed-va-hospital-roommate-found-not-gui.html","headline":"Military pilot who killed VA hospital roommate found not guilty by reason of insanity","moods":[]},{"url":"articles/if-cuba-falls-desantis-hopes-exiles-leave-florida.html","headline":"If Cuba falls, DeSantis hopes exiles leave Florida, rebuild island","moods":["politics"]},{"url":"articles/defense-flatters-golf-legend-jack-nicklaus.html","headline":"Rival lawyers flatter golf legend Jack Nicklaus in defamation trial, say reputation is golden","moods":["courts"]},{"url":"articles/away-from-wife-and-kids-man-amassed-worst-collection.html","headline":"Wife of man who bragged about child abuse tells judge: 'I still choose him'","moods":[]},{"url":"articles/girl-told-her-teacher-she-wanted-to-kill-herself.html","headline":"A girl told her teacher she wanted to kill herself. He let her buy the rope to do it.","moods":["enterprise"]},{"url":"articles/ex-doctor-owes-100-million.html","headline":"'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed","moods":["enterprise"]}];
+const allMoodLabels=[{"id":"courts","label":"Courts"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"breakingnews","label":"Breaking News"},{"id":"oddities","label":"Oddities"}];
+function beatLabel(moods){if(!moods||!moods.length)return'';const found=allMoodLabels.find(m=>m.id===moods[0]);return found?found.label:moods[0];}
+const PAGE=5;let shown=0;
+function renderMore(){const list=document.getElementById('moreList');list.innerHTML='';const slice=restStories.slice(shown,shown+PAGE);slice.forEach(s=>{const a=document.createElement('a');a.className='headline-item';a.href=s.url;a.innerHTML='<span class="headline-beat">'+beatLabel(s.moods)+'</span><span class="headline-text">'+s.headline+'</span>';list.appendChild(a);});const btn=document.getElementById('moreBtn');btn.style.display=shown+PAGE<restStories.length?'inline-block':'none';}
+renderMore();
+document.getElementById('moreBtn').addEventListener('click',()=>{shown+=PAGE;renderMore();});</script>
 </body>
 </html>
