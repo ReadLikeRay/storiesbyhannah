@@ -4,6 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hannah Phillips — Journalist</title>
+ <script>
+(function(){
+  const correct = 'yourpassword';
+  const key = 'sbh_auth';
+  if (sessionStorage.getItem(key) === correct) return;
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.style.display = 'none';
+    const gate = document.createElement('div');
+    gate.innerHTML = `
+      <div style="background:#f5f0e8;min-height:100vh;display:flex;flex-direction:column;font-family:'IBM Plex Sans',sans-serif;">
+        <div style="border-bottom:3px double #0f0e0c;padding:2rem 3rem;">
+          <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;letter-spacing:-0.02em;color:#0f0e0c;">Hannah Phillips<span style="color:#c41e1e;">.</span></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 2rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.16em;color:#7a7468;margin-bottom:2rem;">Private Portfolio</div>
+          <div style="border:1.5px solid #0f0e0c;padding:2.5rem 3rem;background:#ede7d9;width:100%;max-width:400px;box-sizing:border-box;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;letter-spacing:-0.02em;color:#0f0e0c;margin-bottom:0.35rem;">Enter password</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:#7a7468;margin-bottom:1.75rem;">This portfolio is password protected</div>
+            <input id="pwInput" type="password" placeholder="········" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.85rem;font-weight:300;color:#0f0e0c;background:#f5f0e8;border:1.5px solid #d0c9bc;padding:0.65rem 0.85rem;outline:none;box-sizing:border-box;margin-bottom:0.5rem;letter-spacing:0.2em;">
+            <div id="pwError" style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.1em;color:#c41e1e;margin-bottom:0.75rem;min-height:1rem;"></div>
+            <button id="pwBtn" style="width:100%;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;color:#f5f0e8;background:#0f0e0c;border:none;padding:0.75rem;cursor:pointer;">Enter →</button>
+          </div>
+        </div>
+        <div style="border-top:1px solid #d0c9bc;padding:1rem 3rem;background:#ede7d9;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:#7a7468;">© 2026 Hannah Phillips</div>
+        </div>
+      </div>`;
+    document.body.parentNode.insertBefore(gate, document.body);
+
+    function attempt(){
+      const val = document.getElementById('pwInput').value;
+      if(val === correct){
+        sessionStorage.setItem(key, correct);
+        gate.remove();
+        document.body.style.display = '';
+      } else {
+        document.getElementById('pwError').textContent = 'Incorrect password — try again';
+        document.getElementById('pwInput').value = '';
+        document.getElementById('pwInput').focus();
+      }
+    }
+
+    document.getElementById('pwBtn').addEventListener('click', attempt);
+    document.getElementById('pwInput').addEventListener('keydown', function(e){ if(e.key === 'Enter') attempt(); });
+  });
+})();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -524,6 +571,45 @@ const stories = [
     "url": "articles/doomsday-guns-and-jesus-christ-rod-of-iron-festival.html",
     "inLedeRoulette": true,
     "featured": true
+  },
+  {
+    "headline": "Epstein investigation began years earlier than previously believed",
+    "brief": "Palm Beach Police dug through nude photographs in Epstein's trash years before what was believed to be the first investigation.",
+    "lede": "Officers within the West Palm Beach and Palm Beach police departments investigated claims against Jeffrey Epstein and Ghislaine Maxwell as early as 2001, three years before what was believed to be the first tip to law enforcement.",
+    "topics": [
+      "enterprise"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "Feb. 14, 2026",
+    "url": "articles/epstein-investigation-began-years-earlier-than-believed.html",
+    "inLedeRoulette": false,
+    "featured": true
+  },
+  {
+    "headline": "A girl told her teacher she wanted to kill herself. He let her buy the rope to do it.",
+    "brief": "'We’re talking about not only a sexual predator, but someone who played a key role in trying to get her killed,' the girl's attorney said.",
+    "lede": "\"Investigators say the SouthTech Academy teacher accused of having sex with a student did more than groom and abuse her.\"",
+    "topics": [
+      "enterprise"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "April 23, 2025",
+    "url": "articles/girl-told-her-teacher-she-wanted-to-kill-herself.html",
+    "inLedeRoulette": false,
+    "featured": false
+  },
+  {
+    "headline": "Police deny ties to predator catcher, but his videos tell a different story",
+    "brief": "Dustin Lampros, an MMA fighter from Delray Beach, leads \"561 Predator Catchers,\" a vigilante YouTube group that poses as minors online to lure out suspected child predators.",
+    "lede": "The internet is full of predators. This man wants to meet them.",
+    "topics": [
+      "enterprise"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "Feb. 6, 2025",
+    "url": "articles/police-deny-ties-to-predator-catcher.html",
+    "inLedeRoulette": true,
+    "featured": false
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"breakingnews","label":"Breaking News"},{"id":"oddities","label":"Oddities"}];
