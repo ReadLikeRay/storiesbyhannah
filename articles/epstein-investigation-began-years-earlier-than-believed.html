@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epstein investigation began years earlier than previously believed — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Enterprise</span>
+  </div>
+  <h1 class="article-headline">Epstein investigation began years earlier than previously believed</h1>
+
+  <div class="article-deck">Palm Beach Police dug through nude photographs in Epstein's trash years before what was believed to be the first investigation.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Feb. 14, 2026</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://www.palmbeachpost.com/gcdn/authoring/2019/09/16/NPPP/ghows-LK-47c0e2be-e599-4354-bd3b-8c455d059c5d-d660281b.jpeg?width=1320&amp;height=882&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="Jeffrey Epstein appears at the Palm Beach County Courthouse in July 2008 to plead guilty to soliciting a minor for prostitution and solicitation.">
+      <div class="article-media-caption"><span>Jeffrey Epstein appears at the Palm Beach County Courthouse in July 2008 to plead guilty to soliciting a minor for prostitution and solicitation.</span><span class="media-credit">Photo by Uma Sanghvi/The Palm Beach Post</span></div>
+    </div>
+
+    <p>Officers within the West Palm Beach and Palm Beach police departments investigated claims against Jeffrey Epstein and Ghislaine Maxwell as early as 2001, three years before what was believed to be the first tip to law enforcement.</p>
+
+    <p>An intelligence report contained in the latest trove of Epstein files not only reveals the agencies’ early attempts to investigate the complaints, which they deemed unfounded, but also contradicts statements by former-Palm Beach Police Chief Michael Reiter, who has long said that the first victims discovered by police did not implicate Maxwell.</p>
+
+    <p>Reiter, reached for comment by The Palm Beach Post on Feb. 13, said he did not know about his agency's 2001 investigation until recently, when he read the report in the Epstein files. Reiter said “a police chief cannot be aware of every report or investigation,” but said he was surprised his officers didn’t mention the prior complaint once the 2005 investigation began.</p>
+
+    <p>Palm Beach County Sheriff Ric Bradshaw, who was chief of the West Palm Beach Police Department at the time of the 2001 complaint, said over text that he has no memory of his officers investigating Epstein.</p>
+
+    <p>According to one officer, who is not named in the report, three students attending Palm Beach Atlantic University in West Palm Beach told city police in 2001 they’d been approached by Maxwell on campus. Maxwell told the girls she needed “young, beautiful unmarried women” to work at Epstein’s mansion on Palm Beach.</p>
+
+    <p>The students — college roommates whose ages are not listed in the documents, but who were referred to as “girls” — said they went to Epstein’s house on several occasions and were paid $200 a day to answer phones. The calls came from men saying “when they were going to drop off particular girls.”</p>
+
+    <p>All three girls said Maxwell and Epstein were secretive about what was going on in the house, and two said Epstein touched them inappropriately. They told the officer that Maxwell asked for a list of other girls who she could call to work on short notice.</p>
+
+    <p>Maxwell, who is serving a 20-year sentence for grooming and abusing girls as young as 14, told them she needed a large pool to choose from, as she did not know how many she would need at any given time.</p>
+
+    <p>The West Palm Beach police officer asked the girls whether they would give Maxwell the phone numbers of undercover officers. They were receptive to the idea, the officer wrote, though it’s unclear from the report whether this ever happened.</p>
+
+    <p>According to the document, titled “Prostitution-Epstein,” West Palm Beach police referred the information on Dec. 6, 2001, to Palm Beach police. Four days later, then-Sgt. George Frick shared the tip with a detective identified only as A. Taylor.</p>
+
+    <p>Taylor made numerous attempts to reach the girls at their dorm telephone in December 2001 and January 2002 but received no answer. The detective also ran background checks on Epstein and Maxwell, which returned no evidence of a criminal history.</p>
+
+    <p>Beginning in January and continuing through April 2002, Taylor said Palm Beach police officers dug through the garbage at Epstein’s mansion on El Brillo Way. They found nude photographs, directory listings for massages in New York and the United Kingdom, daily calendars, and a list titled “People that I want you to meet,” which contained female names, ages and descriptions of “what they do.”</p>
+
+    <p>Officers compiled a list of all of Epstein's known associates. They conducted drive-by surveillance of his home and recorded the tag numbers of cars parked there. They sought subpoenas from the State Attorney’s Office to investigate calls to and from Epstein’s property, though, according to Taylor, these returned “nothing unusual.”</p>
+
+    <p>Taylor continued to call the students throughout this time and received no answer. The detective then called Palm Beach Atlantic, a private Christian university, and relayed the information received by West Palm Beach police. Campus employees told Taylor two of the girls had since moved off campus, but one remained.</p>
+
+    <p>Security officers searched the girl’s dorm room in April 2002 and found bottles of liquor and a paper with the name of a pornographic website, as well as information “about some type of adult work that paid $2,200 weekly.”</p>
+
+    <p>“Nothing else was found,” Taylor wrote. &quot;(Redacted) is handling all discipline,” which included expelling the girl from campus housing.</p>
+
+    <p>Taylor and Frick interviewed two girls after the search. Both said Maxwell recruited them for administrative work at the El Brillo Way home. Although they felt there was something “weird” about the people living there, the girls reportedly said they didn’t see anything illegal.</p>
+
+    <p>In a subsequent interview, the third girl said she didn’t recall anything illegal happening, though “there were nude photographs of women all over.” She added that there were “women running around the pool area topless, and that people were always getting massages.”</p>
+
+    <p>She told Taylor and Frick that the millionaire financier once offered her a massage. Epstein didn’t touch her himself, she said; a tech gave the massage instead. He did, however, tell her to take off her shirt.</p>
+
+    <p>She told the officers it made her “extremely uncomfortable” and said she had not been back to the home since.</p>
+
+    <p>Taylor concluded the report by writing that although it appeared unusual activity was occurring at the home, “at this time, no illegal activity has been reported or detected.”</p>
+
+    <p>“This information will remain as intelligence purposes only, until a crime is reported or possibly another student or young female report to us while working at the residence,” Taylor wrote.</p>
+
+    <p>The report indicates it was last updated in August 2004. That's two and a half years after West Palm Beach police passed along the tip of Maxwell recruiting students, and seven months before the stepmother of a 14-year-old Royal Palm Beach High student told Palm Beach Police that Epstein molested her daughter, launching what was, until now, believed to be the first investigation.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>Feb. 14, 2026</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
