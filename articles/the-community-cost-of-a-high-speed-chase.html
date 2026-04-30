@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The community cost of a high-speed police chase in northeast Pennsylvania — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Pocono Record</span>
+    <span class="kicker-dot">◆</span>
+    <span>Analysis</span>
+  </div>
+  <h1 class="article-headline">The community cost of a high-speed police chase in northeast Pennsylvania</h1>
+
+  <div class="article-deck">Police pursuits across northeast Pennsylvania, mostly triggered by minor traffic violations, have killed, injured and cost millions since 2000.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Aug. 25, 2021</span>
+  </div>
+  <div class="article-body">
+
+    <p>A man with a suspended license fled from police in 2010. He lost control of the car along a Lehigh Township road and crashed, killing his pregnant wife in the passenger seat beside him.</p>
+
+    <p>Less than a year later in Effort, another man with a suspended license led police in a pursuit that ended in a fatal head-on collision with a 29-year-old woman. In 2014, a Carbon County officer drove more than 110 mph to catch a driver who made an illegal pass. The officer crashed into 69-year-old Carola Sauers' car, killing her and seriously injuring her husband.</p>
+
+    <p>Stories of fatal pursuits occasionally crop up across northeast Pennsylvania: at least seven in Monroe, three in Carbon and two in Wayne counties since 2000. Far more of these chases result in non-fatal but often serious consequences, like injuries to bystanders and property damage (more than $4 million's worth in Pennsylvania last year alone).</p>
+
+    <p>The U.S. Justice Department called chases &quot;the most dangerous of all ordinary police activities&quot; in 1990 and urged agencies to adopt stricter policies on when officers can and cannot pursue a fleeing suspect. Decades later, hundreds of police chases still take place across the state. Most stem from low-level infractions, like driving over the speed limit or making an illegal lane change, and only about a half end with a suspect's arrest, according to data from the Pennsylvania State Police.</p>
+
+    <p>The Pocono Record analyzed data from the state's Police Reporting System to understand the nature of police pursuits in Monroe, Carbon, Wayne and Pike counties between 2015 and 2021. Here's what we learned.</p>
+
+    <h2>Most began over minor offenses</h2>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="43123b80-eed9-4a99-890a-2bbafb738eee" data-type="interactive" data-title="reason for chase"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>More than half of all police chases began with traffic infractions, like speeding, failing to stop at a stop sign, making an illegal U-turn or driving with an expired license. More chases began this way than all other offenses combined.</p>
+
+    <p>People suspected of drunk driving made up the second most common cause for a pursuit, followed by felonies and misdemeanors. Criminal offenses and stolen cars tied, causing just about 5% of all pursuits.</p>
+
+    <h2>About a third caused a crash</h2>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="ffe1d98b-c523-448b-ab54-2454edbf7097" data-type="interactive" data-title="total crashes for web"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>On average, police chases caused car accidents about 30% of the time. The percentage of crashes varies on a county-wide basis, reaching as high as 35% in Carbon county and as low as 21% in Pike.</p>
+
+    <h2>Almost 80 people have been injured since 2015</h2>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="4eb100ca-e2a8-4ee6-9bdd-44e13c3636f6" data-type="interactive" data-title="Police chases in NEPA"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>Of the 79 people injured in police chases, five were bystanders from Monroe and Carbon counties. Wayne and Pike counties haven't reported any bystander or passenger injury since 2015.</p>
+
+    <p>Suspects are far more likely to be injured in police chases, making up almost 80% of all pursuit-related injuries since 2015.</p>
+
+    <p>Chases have caused about $560,000 in property damage — bystanders and police pay the most</p>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="c3493292-89b5-462b-9d30-f3b724e38f8f" data-type="interactive" data-title="cost of police chase"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>Police and bystanders have wracked up more than $300,000 in property damage across the four counties since 2015.</p>
+
+    <p>Bystanders suffered more property damage than police in Monroe county, and two times more in Carbon. Pike is the only of the four counties where police reported having more property damage from chases than suspects and bystanders.</p>
+
+    <p>Wayne is the only county where bystanders accrued less than a thousand dollar's worth of property damage over the last six years.</p>
+
+    <h2>Police caught about 70% of suspects</h2>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="_/RIo5bK5V0fLJmpAq5MuK" data-type="interactive" data-title="number apprehended"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>Suspects went free about 30% of the time, a statistic that matched the statewide average in 2019. Some of these chases were ended voluntarily by police, and others ended when suspects successfully evaded police on foot or in their car.</p>
+
+    <h2>Chases are happening more frequently in all counties but one</h2>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="60ee02a1-0899-4203-9ab7-eaf659aa4ce0" data-type="interactive" data-title="number of pursuits"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>The number of pursuits in Monroe and Pike counties has more than tripled since 2012. In Carbon, it's more than 10 times what it used to be. Wayne is the only county that hasn't reported a significant spike in the number of police pursuits.</p>
+
+    <p>Most recently, Stroud Area Regional Police officers chased after a man who was suspected of pointing a gun at another driver on Aug. 1. The chase took officers from the parking lot of a grocery store through an apartment complex and an elementary school before ending at last in the parking lot of a Wendy's.</p>
+
+    <p>Chases like these through high-populated areas are cause for concern when they come at the expense of public safety. Experts say the potential for property damage, as well as injuries and fatalities to police and the public, must be weighed when deciding whether or not to pursue a suspect — most of whom have not committed a felony or criminal offense.</p>
+
+    <p>“Could that person could have been apprehended peacefully, without endangering the public through a chase?” asked Holona Ochs, an associate professor in Lehigh University's Department of Political Science. “This is an example of something that we can learn from, so we can figure out how to apprehend people who are endangering the public in the safest way possible.”</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Pocono Record</strong> on <strong>Aug. 25, 2021</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
