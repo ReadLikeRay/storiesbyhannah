@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida tracked every overdose death in 2021. Here's what the data shows. — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Analysis</span>
+  </div>
+  <h1 class="article-headline">Florida tracked every overdose death in 2021. Here's what the data shows.</h1>
+
+  <div class="article-deck">Fentanyl, xylazine and drug cocktails drove a deadly statewide epidemic.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">March 7, 2023</span>
+  </div>
+  <div class="article-body">
+
+    <p>Statewide data released by the Palm Beach County State Attorney's Office in January offers a glimpse into the final moments of people who died with drugs in their bloodstream.</p>
+
+    <p>They were teenagers, drunk and drowning; adults, overdosing on something stronger than they meant to take; poisoned babies and suicidal seniors. It's a grim tally of the community cost of addiction, and one that for years has seemed to outpace all attempts to curb it.</p>
+
+    <p>According to the latest data, opioids killed about 6,440 Floridians in 2021. That's a few hundred more than the population of Tequesta, and a 6% increase over the previous year's deaths. Cocktails of alcohol, Ecstasy, anxiety medication, methamphetamine and hallucinogens killed about 1,650 more across the state.</p>
+
+    <p>The Palm Beach Post reviewed the data to learn which combinations of drugs harmed the most people locally, and who bears the brunt of the epidemic. Here's what the numbers show.</p>
+
+    <h2>Despite population growth, Palm Beach County's death count actually dropped — by five people</h2>
+
+    <p>Palm Beach County had the second-most fatal opioid overdoses in 2021 with 525 deaths, placing it just behind Broward County. Adjusted for population size, the per-person death rates in 17 of Florida's 67 counties were higher. Escambia, Volusia and Pinellas counties top that list.</p>
+
+    <p>Palm Beach County marked a 13% drop in fatal opioid overdoses in 2021 from the year before, making it one of eight districts among the 25 across Florida that bucked state trends in a positive direction. Because of population growth, the county's number of deaths in which any drug was present remained almost the same across both years. About 1,165 people died with drugs in their system in 2021 — just five fewer than in 2020.</p>
+
+    <p>Where opioids dipped, other drugs jumped. Xylazine, meth and kratom saw the greatest increases in deaths from 2020 to 2021, totaling about 30 each.</p>
+
+    <h2>Risky alone, lethal together: Knowing which drug combinations killed</h2>
+
+    <p>Opioids don't need the addition of another class of drug to be fatal. Medical examiners traced most overdose deaths to just fentanyl, a tasteless and odorless synthetic opioid up to 50 times more potent than heroin.Fentanyl and cocaine together made up the most common deadly drug combination. Fentanyl and alcohol ranked second, followed by a trio of fentanyl, alcohol and cocaine.</p>
+
+    <h2>Horse sedative 'tranq' has begun to infiltrate Palm Beach County's drug supply</h2>
+
+    <p>Xylazine, a drug known for worsening addiction and leaving gruesome wounds on those who use it, made its debut in Palm Beach County in 2021. Veterinarians use the drug to sedate animals, but when mixed with fentanyl, &quot;tranq&quot; can leave humans in a stupor for hours.</p>
+
+    <p>Medical examiners found tranq in 34 corpses in Palm Beach County in 2021, beating the body count of meth deaths by two. More than 230 died with xylazine in their system statewide — up from zero in 2020.</p>
+
+    <p>The U.S. Food and Drug Administration sent a memo to clinicians in November warning about the drug and its propensity to cause painful ulcers and stymie recovery efforts. Because it's a sedative rather than an opioid, xylazine can resist Narcan, thwarting attempts to reverse a person's opioid overdose.</p>
+
+    <h2>Drugs appeared in bodies young and old</h2>
+
+    <p>Opioids hit men and women in their 30s hardest, but the deaths stretched all the way from infants to the elderly. Three baby girls between a year and 18 months old died in the second half of 2021.</p>
+
+    <p>One was murdered with fentanyl and cocaine within a month of her first birthday. Another died after accidentally consuming fentanyl, and a third overdosed on oxycodone — whether by accident or by force, the medical examiner didn't know.</p>
+
+    <p>Sixty people ages 60 and older lie at the other end of the spectrum. They'd taken a drug before they died, prescription or otherwise, but only nine overdosed. Self-inflicted gunshot wounds killed the majority.</p>
+
+    <p>Suicides happened as frequently as natural deaths among people with drugs in their body in Palm Beach County in 2021: about 150 for both. Homicides, at 86, made up the fewest of the known causes of deaths in which any drug was present.</p>
+
+    <p>Accidental deaths happened twice as often as suicides, homicides and natural deaths combined.</p>
+
+    <h2>Florida can't agree on which addiction efforts to get behind</h2>
+
+    <p>Several camps are fighting for a foothold in the war against drugs. One advocates for harm reduction — rehabilitating people with substance-use disorders rather than incarcerating them — and the other for tougher penalties and aggressive prosecution.</p>
+
+    <p>Palm Beach County State Attorney Dave Aronberg falls somewhere in between. He's prosecuted drug dealers as first-degree murderers and cracked down on patient brokering. He's quick to cite the number of arrests and convictions since his office launched its Sober Home Task Force in 2016.</p>
+
+    <p>He's also supportive of getting Narcan into the hands of first responders, and of jail-diversion programs like the Addiction Stabilization Unit at HCA Florida JFK North Hospital in West Palm Beach — all of which he credits for the 13% drop in opioid deaths.</p>
+
+    <p>The next step, he said, is to legalize fentanyl test strips. They sell for about $1 per stick and can detect the synthetic opioid, but are currently considered illegal drug paraphernalia in Florida.</p>
+
+    <p>State Sen. Tina Polsky, a Democrat from Boca Raton, is slated to reintroduce a bill proposing to legalize the test strips this month. Lawmakers struck the provision from a bill last year that would have done it, instead expanding the potential penalties for people who sell fentanyl and meth.</p>
+
+    <p>&quot;I think we're going to get it this year,&quot; Aronberg said. &quot;We need to.&quot;</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>March 7, 2023</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
