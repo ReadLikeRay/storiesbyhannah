@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They thought the 'stand your ground' defense would save them. Only once did a judge agree. — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Palm Beach Post</span>
+    <span class="kicker-dot">◆</span>
+    <span>Analysis</span>
+  </div>
+  <h1 class="article-headline">They thought the 'stand your ground' defense would save them. Only once did a judge agree.</h1>
+
+  <div class="article-deck">A review of cases between 2019 and 2022 found that of the 10 people who tried invoking the statute to challenge a murder charge, only one succeeded.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Sept. 7, 2022</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://www.palmbeachpost.com/gcdn/presto/2022/08/08/NPPP/071e2d3d-de8c-46aa-aa58-fdd162fef342-20220808_wpb_hamilton_015.JPG?width=1320&amp;height=880&amp;fit=crop&amp;format=pjpg&amp;auto=webp" alt="Joseph Hamilton, charged with first-degree murder for the death of Nicolas Lampp, talks with his public defender during a hearing at the Palm Beach County Courthouse in West Palm Beach.">
+      <div class="article-media-caption"><span>Joseph Hamilton, charged with first-degree murder for the death of Nicolas Lampp, talks with his public defender during a hearing at the Palm Beach County Courthouse in West Palm Beach.</span><span class="media-credit">Photo by Thomas Cordy/The Palm Beach Post</span></div>
+    </div>
+
+    <p>A man who shot his daughter's unarmed boyfriend to death last year said he pulled the trigger to save his own life. The judge didn't buy it.</p>
+
+    <p>With his motion to drop the murder charge denied, 51-year-old Joseph Hamilton joins a growing list of people in Palm Beach County who've tried and failed to use Florida's &quot;stand your ground&quot; law to exonerate themselves.</p>
+
+    <p>&quot;Stand your ground&quot; lets a person use deadly force to protect themselves from imminent danger, but court records from the last three years indicate that it's rarely worked as a defense against murder and attempted murder charges.</p>
+
+    <blockquote>
+      <p>&quot;It's very hard for defendants to prevail,&quot; said Jennifer Zedalis, the director of trial practice at the University of Florida and a former public defender. &quot;Laws don't always work the way we think they're going to.&quot;</p>
+    </blockquote>
+
+    <p>A review of cases between 2019 and 2022 found that of the 10 people who tried invoking the statute to challenge a murder charge, only one succeeded. Four of the 10 were denied within the last nine months. While the facts of each case vary widely — from a man who killed his elderly neighbor to the woman who shot her alleged abuser — judges' rulings offer insight into why arguments like Hamilton's don't always stand up to scrutiny.</p>
+
+    <h2>Retreating victims, history of threats complicate 'stand your ground' claims</h2>
+
+    <p>Defense attorneys and public defenders paint alarming pictures in their &quot;stand your ground&quot; motions to the judge, outlining scenarios in which they say their clients faced an impossible choice: kill or be killed.</p>
+
+    <p>But in more than half of the &quot;stand your ground&quot; motions judges denied, evidence indicated that the alleged assailants were either retreating or already far enough away that they didn't pose an immediate threat to the defendant by the time they were shot.</p>
+
+    <p>Such was the case of 26-year-old Travis Rudolph, a former FSU football player who faces a first-degree murder charge and three counts of attempted murder.</p>
+
+    <p>Rudolph said he feared for his life when four men confronted him at his Lake Park home just after midnight on April 7, 2021. According to prosecutors, they'd already begun to flee by the time Rudolph grabbed his semi-automatic rifle and fired 39 rounds in their direction, striking 21-year-old Sebastien Jean-Jacques 10 times in the back.</p>
+
+    <p>No &quot;cautious and prudent person&quot; would have believed deadly force was the only option, wrote Circuit Judge Jeffrey Gillen in an order denying his motion in March.</p>
+
+    <p>Hamilton, too, appeared to have shot 23-year-old Nicolas Lampp as he retreated, wrote Circuit Judge Sarah Willis in August. The trajectory of the bullet through Lampp's skull indicated that he was falling backward or already on the ground when Hamilton pulled the trigger.</p>
+
+    <p>Palm Beach County sheriff's deputies said Hamilton also talked about shooting and &quot;siccing his goons&quot; on Lampp hours before the confrontation, according to his arrest report.</p>
+
+    <p>Gillen pointed to a similar comment made by Robert Finney III, who opened fire into the back seat of his car after discovering his wife inside with a 20-year-old Wellington man in 2018. He killed the man and paralyzed his wife, and is scheduled to face a jury trial in October.</p>
+
+    <p>Finney was jealous, insecure and controlling, the judge said. According to his wife, he promised to kill a different man she had an affair with prior to the fatal shooting. Gillen denied Finney's &quot;stand your ground&quot; motion in February.</p>
+
+    <h2>Murder charges stick when defendants lie</h2>
+
+    <p>According to the judges' orders, six of the nine failed &quot;stand your ground&quot; claimants were either slow to engage with police or made allegations that were inconsistent with other witness accounts.</p>
+
+    <p>Ian Stefan told police that his 68-year-old neighbor in West Palm Beach &quot;charged at him&quot; and demanded that he leash his pit bull, but a nearby neighbor said the man appeared only to be walking quickly when Stefan shot and killed him.</p>
+
+    <p>Circuit Judge Daliah Weiss chose to overlook similar inconsistencies pointed out by prosecutors in the case of Raed Hamdan, the only one of the 10 defendants who successfully invoked &quot;stand your ground.&quot;</p>
+
+    <p>Hamdan shot Roland Martinez four times through his closed driver's-side window after the man tried to force his way into Hamdan's car in 2019 in Boca Raton. Hamdan testified that he owed Martinez money, and that Martinez was threatening to shoot and kill him because of it.</p>
+
+    <p>Though footage from a nearby surveillance camera revealed that Hamdan exaggerated his account of Martinez's attack on the car, Weiss ruled that he still reasonably feared for his life.</p>
+
+    <p>&quot;Hamdan was untruthful to the police and has an obvious interest in the outcome of this case,&quot; the judge wrote. However, she found that he had no duty to retreat and was &quot;therefore permitted to stand his ground.&quot;</p>
+
+    <p>Weiss' ruling came Jan. 4, just one day after she filed an order denying a different defendant's &quot;stand your ground&quot; motion.</p>
+
+    <p>Barbara James-Tolbert said she killed her 25-year-old boyfriend, Albren Banks, and his pit bull, King, after he broke into her suburban West Palm Beach home and confronted her with a gun in 2018.</p>
+
+    <p>She claimed Banks repeatedly beat her, though neighbors testified that they'd seen her physically drag him back into the house if he tried to get away during arguments. Weiss ultimately ruled that James-Tolbert shot Alren Banks in anger, not self-defense.</p>
+
+    <h2>Those denied 'stand your ground' can still argue self-defense</h2>
+
+    <p>Even when a judge denies a &quot;stand your ground&quot; motion, defendants can still argue during trial that they acted in self-defense.</p>
+
+    <p>Bachir Osias pled his case before a jury after Circuit Judge Cheryl Caracuzzo denied his motion in December, leaving jurors to weigh whether the premeditated murder charge against him was justified.</p>
+
+    <p>After a four-hour deliberation, they decided it wasn't.</p>
+
+    <p>Osias was charged with first-degree murder after he killed 23-year-old Jeff Estime in 2020 in Delray Beach, but upon hearing his testimony about Estime's reputation and intimidation, jurors convicted him of manslaughter with a weapon instead.</p>
+
+    <p>As Osias awaits his sentencing, the assistant state attorney who prosecuted him has her eyes toward the next case sure to come her way.</p>
+
+    <p>&quot;They file them a lot, and for the most part, they are denied,&quot; Adrienne Ellis said. &quot;We can prove our case.&quot;</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Palm Beach Post</strong> on <strong>Sept. 7, 2022</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
