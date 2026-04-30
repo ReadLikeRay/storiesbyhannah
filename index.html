@@ -55,6 +55,12 @@
   @keyframes fadeUp{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
   .story-card{animation:fadeUp 0.3s ease both;}
   .story-card:nth-child(1){animation-delay:0ms;}.story-card:nth-child(2){animation-delay:60ms;}.story-card:nth-child(3){animation-delay:120ms;}.story-card:nth-child(4){animation-delay:180ms;}.story-card:nth-child(5){animation-delay:240ms;}.story-card:nth-child(6){animation-delay:300ms;}
+  .more-label{grid-column:1/-1;font-family:'IBM Plex Mono',monospace;font-size:0.52rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);padding:0.75rem 0 0.5rem;border-top:1px solid var(--rule);margin-top:0;}
+  .headline-list{grid-column:1/-1;border-top:1px solid var(--rule);}
+  .headline-item{display:flex;align-items:baseline;gap:1rem;padding:0.65rem 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit;transition:color 0.15s ease;}
+  .headline-item:hover .headline-text{color:var(--accent);}
+  .headline-meta{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);flex-shrink:0;min-width:140px;}
+  .headline-text{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;line-height:1.3;color:var(--ink);}
   .lede-section{margin:0 4rem 4rem;border:1.5px solid var(--ink);padding:3rem 3.5rem;position:relative;background:var(--cream);}
   .lede-section::before{content:'❧';position:absolute;top:-0.95rem;left:3rem;background:var(--cream);padding:0 0.6rem;font-size:1.1rem;color:var(--accent);}
   .lede-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.75rem;}
@@ -134,7 +140,8 @@ const stories = [
     "publication": "The Pocono Record",
     "date": "Dec. 17, 2021",
     "url": "articles/hope-for-the-holidays-100-children-get-their-wish.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "Happy Meals, somber tales at 'Coffee with a Cop' event",
@@ -146,7 +153,8 @@ const stories = [
     "publication": "The Pocono Record",
     "date": "Nov. 6, 2021",
     "url": "articles/happy-meals-somber-tales-at-coffee-with-a-cop-event.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "Lose the husband, keep the money? Judges rule in Palm Beach couple's 'insane' breakup",
@@ -158,7 +166,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Aug. 29, 2023",
     "url": "articles/lose-the-husband-keep-the-money.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": true
   },
   {
     "headline": "Meet the 70-year-old Quaalude queenpin of Boca Raton",
@@ -170,7 +179,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 20, 2023",
     "url": "articles/meet-the-70-year-old-quaalude-queenpin-of-boca-raton.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": true
   },
   {
     "headline": "Live updates: 'No Kings' protests across Palm Beach County",
@@ -182,7 +192,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "March 28, 2026",
     "url": "articles/live-updates-no-kings-protests-across-palm-beach-county.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "'My rampage would be unlike any other': Teen diary lands man in court a decade later",
@@ -194,7 +205,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 29, 2023",
     "url": "articles/rampage-unlike-any-other-teen-diary.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": false
   },
   {
     "headline": "'They came with nothing': Hundreds fleeing Hurricane Ian take shelter in Palm Beach County hotels",
@@ -206,7 +218,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 30, 2022",
     "url": "articles/hundreds-flee-hurricane-ian.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": true
   },
   {
     "headline": "'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed",
@@ -218,7 +231,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Aug. 28, 2024",
     "url": "articles/ex-doctor-owes-100-million.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": true
   },
   {
     "headline": "Federal agents are using the 6-7 meme to catch suspected child predators",
@@ -230,7 +244,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Feb. 3, 2016",
     "url": "articles/federal-agents-are-using-the-6-7-meme.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "Could West Palm Police have stopped Ghislaine Maxwell in 2001?",
@@ -242,7 +257,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "March 2, 2026",
     "url": "articles/could-west-palm-police-have-stopped-ghislaine-maxwell.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "Therapist becomes star witness in Trump assassination attempt trial",
@@ -252,7 +268,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 12, 2025",
     "url": "articles/therapist-becomes-star-witness-in-trump-assassination-attemp.html",
-    "inLedeRoulette": true
+    "inLedeRoulette": true,
+    "featured": false
   },
   {
     "headline": "Man created an online sanctuary for pedophiles and predators",
@@ -264,7 +281,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Feb. 12, 2024",
     "url": "articles/how-the-feds-toppled-an-online-empire.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "Manicurist who threatened Trump after 'watching too much MSNBC' sent to prison",
@@ -276,7 +294,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Dec. 5, 2024",
     "url": "articles/boca-manicurist-threatened-donald-trump.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "These loopholes in Florida's gun laws give felons easy access to firearms",
@@ -288,7 +307,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 21, 2024",
     "url": "articles/loopholes-in-florida-gun-laws.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "Billionaires bankroll Republican bid for top prosecutor in Trump's home county",
@@ -300,7 +320,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Oct. 24, 2024",
     "url": "articles/billionaires-bankroll-republican-bid-for-top-prosecutor.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "A mayor’s resignation reveals deep political cracks in this Florida city",
@@ -312,7 +333,8 @@ const stories = [
     "publication": "Orlando Sentinel",
     "date": "March 22, 2021",
     "url": "articles/winter-springs-mayor-resignation-reveals-deep-political-cracks.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "Behind bars, Florida’s prisoners cheer Biden’s election victory",
@@ -324,7 +346,8 @@ const stories = [
     "publication": "WUFT News",
     "date": "Nov. 12, 2020",
     "url": "articles/behind-bars-floridas-prisoners-cheer-bidens-election-victory.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": true
   },
   {
     "headline": "First-degree murder charges for drug dealers aren't sticking. Here’s why.",
@@ -336,7 +359,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "May 20, 2022",
     "url": "articles/why-murder-charges-for-drug-dealers-arent-sticking.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   },
   {
     "headline": "Florida tracked every overdose death in 2021. Here's what the data shows.",
@@ -348,7 +372,8 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "March 7, 2023",
     "url": "articles/florida-tracked-every-overdose-death.html",
-    "inLedeRoulette": false
+    "inLedeRoulette": false,
+    "featured": false
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"breakingnews","label":"Breaking News"},{"id":"oddities","label":"Oddities"}];
@@ -363,7 +388,7 @@ document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
 if(ledeQueue.length)nextLede();
 let activeTopicId=null;
 function renderTopics(){const grid=document.getElementById('topicGrid');topics.forEach(topic=>{const btn=document.createElement('button');btn.className='topic-btn';btn.innerHTML='<span>'+topic.label+'</span>';btn.addEventListener('click',()=>{const isActive=btn.classList.contains('active');document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));activeTopicId=null;if(isActive){document.getElementById('storiesSection').classList.remove('visible');}else{btn.classList.add('active');activeTopicId=topic.id;selectTopic(topic.id,topic.label);}});grid.appendChild(btn);});if(expandedTopics.length){const browseBtn=document.createElement('button');browseBtn.className='topic-btn browse-btn';browseBtn.innerHTML='<span>Browse all topics ▾</span>';browseBtn.addEventListener('click',()=>{const panel=document.getElementById('expandPanel');const open=panel.classList.toggle('open');browseBtn.querySelector('span').textContent=open?'Hide topics ▴':'Browse all topics ▾';if(open&&!panel.innerHTML){const groups={};expandedTopics.forEach(t=>{const g=t.group||'topics';if(!groups[g])groups[g]=[];groups[g].push(t);});const groupLabels={people:'People & Cases',topics:'Topics',format:'Format',featured:'Featured'};Object.keys(groups).forEach(g=>{const lbl=document.createElement('div');lbl.className='expand-group-label';lbl.textContent=groupLabels[g]||g;panel.appendChild(lbl);const row=document.createElement('div');row.className='expand-tags';groups[g].forEach(t=>{const tag=document.createElement('button');tag.className='expand-tag';tag.textContent=t.label;tag.addEventListener('click',()=>{document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));tag.classList.add('active');activeTopicId=t.id;selectTopic(t.id,t.label);});row.appendChild(tag);});panel.appendChild(row);});}});grid.appendChild(browseBtn);}}
-function selectTopic(id,label){const filtered=stories.filter(s=>s.topics.includes(id));const section=document.getElementById('storiesSection');section.classList.add('visible');document.getElementById('storiesTopicLabel').textContent=label;document.getElementById('storiesCount').textContent=filtered.length+' stor'+(filtered.length===1?'y':'ies');const grid=document.getElementById('storyGrid');grid.innerHTML='';filtered.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='story-card';a.innerHTML='<div class="story-meta">'+story.publication+' · '+story.date+'</div>'+'<div class="story-headline">'+story.headline+'</div>'+'<div class="story-brief">'+story.brief+'</div>'+'<span class="story-arrow">↗</span>';grid.appendChild(a);void a.offsetWidth;});section.scrollIntoView({behavior:'smooth',block:'start'});}
+function selectTopic(id,label){const filtered=stories.filter(s=>s.topics.includes(id));const featured=filtered.filter(s=>s.featured);const rest=filtered.filter(s=>!s.featured);const section=document.getElementById('storiesSection');section.classList.add('visible');document.getElementById('storiesTopicLabel').textContent=label;document.getElementById('storiesCount').textContent=filtered.length+' stor'+(filtered.length===1?'y':'ies');const grid=document.getElementById('storyGrid');grid.innerHTML='';featured.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='story-card';a.innerHTML='<div class="story-meta">'+story.publication+' · '+story.date+'</div>'+'<div class="story-headline">'+story.headline+'</div>'+'<div class="story-brief">'+story.brief+'</div>'+'<span class="story-arrow">↗</span>';grid.appendChild(a);void a.offsetWidth;});if(rest.length){const lbl=document.createElement('div');lbl.className='more-label';lbl.textContent='More';grid.appendChild(lbl);const list=document.createElement('div');list.className='headline-list';rest.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='headline-item';a.innerHTML='<span class="headline-meta">'+story.publication+' · '+story.date+'</span>'+'<span class="headline-text">'+story.headline+'</span>';list.appendChild(a);});grid.appendChild(list);}section.scrollIntoView({behavior:'smooth',block:'start'});}
 renderTopics();
 </script>
 </body>
