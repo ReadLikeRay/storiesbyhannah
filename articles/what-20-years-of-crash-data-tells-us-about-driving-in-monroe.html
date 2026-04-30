@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What 20 years of crash data tells us about driving in Monroe County, Pa. — Hannah Phillips</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#0f0e0c;--paper:#f5f0e8;--cream:#ede7d9;--accent:#c41e1e;--muted:#7a7468;--rule:#d0c9bc}
+  body{background:var(--paper);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:0.4}
+  .top-nav{border-bottom:1px solid var(--rule);padding:0.85rem 4rem;display:flex;justify-content:space-between;align-items:center}
+  .nav-home{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);text-decoration:none;transition:color 0.15s}
+  .nav-home:hover{color:var(--accent)}
+  .nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;letter-spacing:-0.02em;color:var(--ink);text-decoration:none}
+  .nav-name span{color:var(--accent)}
+  .article-wrap{max-width:740px;margin:0 auto;padding:4rem 2rem 6rem}
+  .article-kicker{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
+  .kicker-dot{color:var(--rule);font-size:0.5rem}
+  .article-headline{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:900;line-height:1.08;letter-spacing:-0.02em;margin-bottom:1.25rem;color:var(--ink)}
+  .article-deck{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.6vw,1.2rem);font-weight:400;font-style:italic;line-height:1.55;color:var(--muted);margin-bottom:1.75rem}
+  .article-byline{display:flex;align-items:baseline;gap:1rem;padding:1rem 0;border-top:1px solid var(--rule);border-bottom:3px double var(--ink);margin-bottom:2.5rem;flex-wrap:wrap}
+  .byline-by{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+  .byline-name{font-family:'IBM Plex Sans',sans-serif;font-size:0.82rem;font-weight:500;color:var(--ink)}
+  .byline-date{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-left:auto}
+  .article-body p{font-family:'Playfair Display',serif;font-size:clamp(1rem,1.3vw,1.1rem);font-weight:400;line-height:1.8;color:var(--ink);margin-bottom:1.5rem}
+  .article-body p:first-child::first-letter{font-family:'Playfair Display',serif;font-size:3.8rem;font-weight:900;line-height:0.8;float:left;margin-right:0.1em;margin-top:0.1em;color:var(--accent)}
+  .article-body h2{font-family:'IBM Plex Sans',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--muted);margin:2.5rem 0 1rem;padding-top:2rem;border-top:1px solid var(--rule)}
+  .article-body blockquote{border-left:3px solid var(--accent);padding:0.5rem 0 0.5rem 1.5rem;margin:2rem 0}
+  .article-body blockquote p{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,1.5vw,1.3rem);font-style:italic;font-weight:400;color:var(--ink);margin-bottom:0}
+  .article-body blockquote p::first-letter{font-size:inherit;float:none;margin:0;color:inherit}
+  .article-end{margin:3rem 0 0;text-align:center;font-size:1rem;color:var(--rule);letter-spacing:0.5rem}
+  .originally-published{margin-top:3rem;padding:1rem 1.5rem;background:var(--cream);border-left:3px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);line-height:1.8}
+  footer{border-top:3px double var(--ink);padding:1.5rem 4rem;display:flex;justify-content:space-between;align-items:center;background:var(--cream)}
+  footer p{font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--accent)}
+  .article-media{margin:2rem 0}
+  .article-photo img{width:100%;display:block;border:1px solid var(--rule)}
+  .article-media-caption{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-top:0.5rem;display:flex;justify-content:space-between;gap:1rem}
+  .media-credit{opacity:0.7}
+  .media-embed-wrap{position:relative;width:100%}
+  .media-embed-wrap iframe{width:100%;border:none}
+  .article-embed{background:var(--cream);border:1px solid var(--rule);padding:0}
+  .embed-label{font-family:'IBM Plex Mono',monospace;font-size:0.55rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);padding:0.5rem 1rem;border-bottom:1px solid var(--rule)}
+  .embed-wrap{overflow:hidden}
+  @media(max-width:700px){.top-nav,footer{padding-left:1.5rem;padding-right:1.5rem}.article-wrap{padding:2.5rem 1.5rem 4rem}}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <a class="nav-home" href="../index.html">← Back to portfolio</a>
+  <a class="nav-name" href="../index.html">Hannah Phillips<span>.</span></a>
+</nav>
+<div class="article-wrap">
+  <div class="article-kicker">
+    <span>The Pocono Record</span>
+    <span class="kicker-dot">◆</span>
+    <span>Analysis</span>
+  </div>
+  <h1 class="article-headline">What 20 years of crash data tells us about driving in Monroe County, Pa.</h1>
+
+  <div class="article-deck">Monroe County's deadliest roads reveal decades of crash patterns as fatal wrecks continue claiming lives across the region.</div>
+  <div class="article-byline">
+    <span class="byline-by">By</span>
+    <span class="byline-name">Hannah Phillips</span>
+    <span class="byline-date">Jan. 24, 2022</span>
+  </div>
+  <div class="article-body">
+
+    <div class="article-media article-photo">
+      <img src="https://www.poconorecord.com/gcdn/authoring/2011/04/13/NPOR/ghows_image-PR-99393310-086c-48ca-9366-2a4cb6142362.jpeg?crop=3875,2189,x0,y133&amp;width=1500&amp;height=844&amp;format=pjpg&amp;auto=webp&amp;quality=60" alt="First responders inspect the scene of a car crash.">
+      <div class="article-media-caption"><span>First responders inspect the scene of a car crash.</span><span class="media-credit">Pocono Record archives</span></div>
+    </div>
+
+    <p>Two fatal car accidents in Monroe County earlier this month joined the nearly 50,000 crashes that have taken place over the last two decades.</p>
+
+    <p>The Pocono Record reviewed the data of more than 48,000 of those crashes to find out when and where they happen most. Here's what we learned.</p>
+
+    <p>Young drivers from Pennsylvania crash the most.</p>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="4cfd3352-c59b-43d3-ae50-10197db41853" data-type="interactive" data-title="Copy: Who they are"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>Young drivers — those between 16 and 25 — made up nearly a third of all crashes, more than any other age group. The share drops steadily with age, with drivers 66 and older accounting for the fewest.</p>
+
+    <p>Joe Totero, a first responder with the East Stroudsburg Fire Department, said many young drivers underestimate the risk of inclement weather.</p>
+
+    <p>&quot;A lot of the young ones — especially with these new muscle cars and hot rods and trucks — they think they can do whatever, especially if they have a four-wheel drive truck,&quot; Totero said. &quot;They think, 'Oh yeah, I can go through the snow. No problem.' That's not always the case.&quot;</p>
+
+    <p>Older people, he said, have enough sense to stay indoors.</p>
+
+    <p>One in every six drivers who crashed were not from Pennsylvania. Most came from New York and New Jersey, whose residents make up the bulk of the Poconos' seasonal and weekend traffic.</p>
+
+    <div class="article-media article-embed">
+      
+      <div class="embed-wrap"><div class="infogram-embed" data-id="1e606eb0-c5bc-48a7-a37d-44d687087561" data-type="interactive" data-title="Copy: fatal/non fatal crashes by month"></div><script>!function(e,n,i,s){var d="InfogramEmbeds";var o=e.getElementsByTagName(n)[0];if(window[d]&&window[d].initialized)window[d].process&&window[d].process();else if(!e.getElementById(i)){var r=e.createElement(n);r.async=1,r.id=i,r.src=s,o.parentNode.insertBefore(r,o)}}(document,"script","infogram-async","https://e.infogram.com/js/dist/embed-loader-min.js");</script></div>
+    </div>
+
+    <p>Crashes peak in winter. So does the time it takes for police to respond. (8)</p>
+
+    <p>Most crashes occurred in January and December, when icy roads make for more precarious driving conditions. Eric Rath, a corporal with the Pocono Township Police, said most of these accidents happen when the weather shifts unexpectedly.</p>
+
+    <p>&quot;When it's a known big storm, people do pretty good and avoid going out on the roads,&quot; he said. &quot;It's those quick storms that hit out of nowhere: Those are the storms that really cause the accidents.&quot;</p>
+
+    <p>It took police more time on average to respond to accidents in winter than in summer, but only by about two minutes. Not speeding is key to navigating the roads safely, Rath said.</p>
+
+    <p>&quot;If we're causing more stress on the system by getting into an accident, we're no good to anybody,&quot; he said.</p>
+
+    <p>How significant a difference the minutes make depends on the severity of the crash.</p>
+
+    <p>&quot;If it's a serious accident, two minutes can be life or death,&quot; Totero said. &quot;But usually if a person is that close to death, two minutes earlier is not going to probably help. If they're trapped and their car's on fire, maybe that two minutes could have gotten them out.&quot;</p>
+
+    <p>First responders can't focus on &quot;what-if's,&quot; the firefighter added. They're trained to do the job as quickly and safely as they can without causing another crash.</p>
+
+    <h2>Most crashes happen when the weather is clear (16)</h2>
+
+    <p>Despite winter's outsized reputation for dangerous driving, most crashes in Monroe County over the last two decades happened under clear skies. Rain and snow accounted for a fraction of the total.</p>
+
+    <p>Road conditions tell a similar story, with most happening on dry pavement. Wet roads produced more crashes than snow-covered ones, and ice and frost — the most treacherous conditions — were among the least common at the time of a crash.</p>
+
+  </div>
+  <div class="article-end">· · ·</div>
+  <div class="originally-published">
+    Originally published in <strong>The Pocono Record</strong> on <strong>Jan. 24, 2022</strong>.
+  </div>
+</div>
+<footer>
+  <p>© 2026 Hannah Phillips</p>
+  <p><a href="../index.html">← Portfolio</a></p>
+</footer>
+</body>
+</html>
