@@ -64,7 +64,7 @@
   .lede-section{margin:0 4rem 4rem;border:1.5px solid var(--ink);padding:3rem 3.5rem;position:relative;background:var(--cream);}
   .lede-section::before{content:'❧';position:absolute;top:-0.95rem;left:3rem;background:var(--cream);padding:0 0.6rem;font-size:1.1rem;color:var(--accent);}
   .lede-label{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--muted);margin-bottom:1.75rem;}
-  .lede-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:400;font-style:normal;line-height:1.7;color:var(--ink);min-height:4.5rem;transition:opacity 0.22s ease;}
+  .lede-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:400;font-style:italic;line-height:1.7;color:var(--ink);min-height:4.5rem;transition:opacity 0.22s ease;}
   .lede-text.fading{opacity:0;}
   .lede-source{margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);transition:opacity 0.22s ease;}
   .lede-source.fading{opacity:0;}
@@ -161,7 +161,7 @@ const stories = [
     "brief": "With millions on the line and celebrity lawyers on both sides, this is the story of a couple too rich to breakup but too bitter to stay together.",
     "lede": "Abe Haruvi is unhappily married and doing everything he can to stay that way.",
     "topics": [
-      "courts"
+      "oddities"
     ],
     "publication": "The Palm Beach Post",
     "date": "Aug. 29, 2023",
@@ -196,7 +196,7 @@ const stories = [
     "featured": false
   },
   {
-    "headline": "Teen diary lands man in court a decade later",
+    "headline": "'My rampage would be unlike any other': Teen diary lands man in court a decade later",
     "brief": "Journals unearthed after ten years revealed a young man’s obsession with America’s deadliest killers and his plan to outdo them all.",
     "lede": "A Florida high schooler wrote the names of his enemies and how he planned to kill them.",
     "topics": [
@@ -205,7 +205,7 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 29, 2023",
     "url": "articles/rampage-unlike-any-other-teen-diary.html",
-    "inLedeRoulette": false,
+    "inLedeRoulette": true,
     "featured": false
   },
   {
@@ -218,11 +218,11 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Sept. 30, 2022",
     "url": "articles/hundreds-flee-hurricane-ian.html",
-    "inLedeRoulette": false,
+    "inLedeRoulette": true,
     "featured": true
   },
   {
-    "headline": "Ex-doctor owes $100 million to family of boy whose penis he severed",
+    "headline": "'His last butchered patient': Ex-doctor owes $100 million to family of boy whose penis he severed",
     "brief": "\"He was visibly shocked,\" the child's father testified. \"He said he'd never seen anything like this.\"",
     "lede": "Days after the Florida Board of Medicine voted to revoke his medical license, OB-GYN Berto Lopez performed a circumcision anyway. He botched it, severing the child’s penis and adding another name to a long list of patients whose mangled procedures caused the board to pull his license in the first place.",
     "topics": [
@@ -231,7 +231,7 @@ const stories = [
     "publication": "The Palm Beach Post",
     "date": "Aug. 28, 2024",
     "url": "articles/ex-doctor-owes-100-million.html",
-    "inLedeRoulette": false,
+    "inLedeRoulette": true,
     "featured": true
   },
   {
@@ -249,7 +249,7 @@ const stories = [
   },
   {
     "headline": "Could West Palm Police have stopped Ghislaine Maxwell in 2001?",
-    "brief": "Officers say they had no choice but to hand off the investigation. Legal experts disagree.",
+    "brief": "West Palm Beach police say they had no choice but to hand off the investigation. Legal experts disagree.",
     "lede": "After learning Ghislaine Maxwell was recruiting \"young, beautiful, unmarried women\" from Palm Beach Atlantic University to work at Jeffrey Epstein's home, West Palm Beach police referred the matter elsewhere and pursued the case no further.",
     "topics": [
       "enterprise"
@@ -374,6 +374,56 @@ const stories = [
     "url": "articles/florida-tracked-every-overdose-death.html",
     "inLedeRoulette": false,
     "featured": false
+  },
+  {
+    "headline": "How the theft of a Pocono bobcat unfolded, as told by the accused",
+    "brief": "\"This man walked in and out four minutes later with a 22-year-old bobcat in his arms,\" the zookeeper said.",
+    "lede": "\"Pray for me,\" Samuel Levit said before his court hearing.",
+    "topics": [
+      "oddities"
+    ],
+    "publication": "Pocono Record",
+    "date": "Feb. 17, 2022",
+    "url": "articles/how-the-theft-of-a-pocono-bobcat-unfolded.html",
+    "inLedeRoulette": false,
+    "featured": false
+  },
+  {
+    "headline": "They thought the 'stand your ground' defense would save them. Only once did a judge agree.",
+    "brief": "A review of cases between 2019 and 2022 found that of the 10 people who tried invoking the statute to challenge a murder charge, only one succeeded.",
+    "lede": "\"A man who shot his daughter's boyfriend to death in Royal Palm Beach last year said he pulled the trigger to save his own life.\"",
+    "topics": [
+      "analysis"
+    ],
+    "publication": "The Palm Beach Post",
+    "date": "Sept. 7, 2022",
+    "url": "articles/they-thought-the-stand-your-ground-defense-would-save-them.html",
+    "inLedeRoulette": false,
+    "featured": false
+  },
+  {
+    "headline": "'Unspeakable': Father molested teen daughter after release from prison for infant's death",
+    "brief": "Peter Zayas lost custody of his eldest daughter in the wake of his infant's death. When they reunited years later, investigators say he abused her, too.",
+    "lede": "With his release from prison imminent, Peter Zayas had a rare opportunity: Atone for the death of his infant daughter by becoming a father to his teenage one. Instead, he victimized her, too.",
+    "topics": [],
+    "publication": "The Palm Beach Post",
+    "date": "June 4, 2024",
+    "url": "articles/father-molested-teen-daughter-after-release.html",
+    "inLedeRoulette": true,
+    "featured": false
+  },
+  {
+    "headline": "The community cost of a high-speed police chase in northeast Pennsylvania",
+    "brief": "Police pursuits across northeast Pennsylvania, mostly triggered by minor traffic violations, have killed, injured and cost millions since 2000.",
+    "lede": "Police pursuits across northeast Pennsylvania, mostly triggered by minor traffic violations, have killed, injured and cost millions since 2000.",
+    "topics": [
+      "analysis"
+    ],
+    "publication": "The Pocono Record",
+    "date": "Aug. 25, 2021",
+    "url": "articles/the-community-cost-of-a-high-speed-chase.html",
+    "inLedeRoulette": false,
+    "featured": false
   }
 ];
 const topics  = [{"id":"courts","label":"Courts"},{"id":"politics","label":"Politics"},{"id":"enterprise","label":"Enterprise"},{"id":"analysis","label":"Analysis"},{"id":"breakingnews","label":"Breaking News"},{"id":"oddities","label":"Oddities"}];
@@ -383,28 +433,12 @@ const publications = ["The New York Times","Associated Press","Chicago Tribune",
 const ledeStories=stories.filter(s=>s.inLedeRoulette&&s.lede);
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 let ledeQueue=ledeStories.length?shuffle(ledeStories.map((_,i)=>i)):[];let ledePos=0;
-function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent=story.lede;sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
+function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent='“'+story.lede+'”';sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
 document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
 if(ledeQueue.length)nextLede();
 let activeTopicId=null;
- function abbrevPub(pub){
-  const map={
-    'The Palm Beach Post':'PBP',
-    'USA Today':'USAT',
-    'Palm Beach Post':'PBP',
-    'The Miami Herald':'Miami Herald',
-    'The New York Times':'NYT',
-    'New York Times':'NYT',
-    'Associated Press':'AP',
-    'The Orlando Sentinel':'OS',
-    'Chicago Tribune':'Chi. Tribune',
-    'WUFT News':'WUFT',
-    'The Pocono Record':'PR'
-  };
-  return map[pub]||pub;
-}
 function renderTopics(){const grid=document.getElementById('topicGrid');topics.forEach(topic=>{const btn=document.createElement('button');btn.className='topic-btn';btn.innerHTML='<span>'+topic.label+'</span>';btn.addEventListener('click',()=>{const isActive=btn.classList.contains('active');document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));activeTopicId=null;if(isActive){document.getElementById('storiesSection').classList.remove('visible');}else{btn.classList.add('active');activeTopicId=topic.id;selectTopic(topic.id,topic.label);}});grid.appendChild(btn);});if(expandedTopics.length){const browseBtn=document.createElement('button');browseBtn.className='topic-btn browse-btn';browseBtn.innerHTML='<span>Browse all topics ▾</span>';browseBtn.addEventListener('click',()=>{const panel=document.getElementById('expandPanel');const open=panel.classList.toggle('open');browseBtn.querySelector('span').textContent=open?'Hide topics ▴':'Browse all topics ▾';if(open&&!panel.innerHTML){const groups={};expandedTopics.forEach(t=>{const g=t.group||'topics';if(!groups[g])groups[g]=[];groups[g].push(t);});const groupLabels={people:'People & Cases',topics:'Topics',format:'Format',featured:'Featured'};Object.keys(groups).forEach(g=>{const lbl=document.createElement('div');lbl.className='expand-group-label';lbl.textContent=groupLabels[g]||g;panel.appendChild(lbl);const row=document.createElement('div');row.className='expand-tags';groups[g].forEach(t=>{const tag=document.createElement('button');tag.className='expand-tag';tag.textContent=t.label;tag.addEventListener('click',()=>{document.querySelectorAll('.topic-btn,.expand-tag').forEach(b=>b.classList.remove('active'));tag.classList.add('active');activeTopicId=t.id;selectTopic(t.id,t.label);});row.appendChild(tag);});panel.appendChild(row);});}});grid.appendChild(browseBtn);}}
-function selectTopic(id,label){const filtered=stories.filter(s=>s.topics.includes(id));const featured=filtered.filter(s=>s.featured);const rest=filtered.filter(s=>!s.featured);const section=document.getElementById('storiesSection');section.classList.add('visible');document.getElementById('storiesTopicLabel').textContent=label;document.getElementById('storiesCount').textContent=filtered.length+' stor'+(filtered.length===1?'y':'ies');const grid=document.getElementById('storyGrid');grid.innerHTML='';featured.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='story-card';a.innerHTML='<div class="story-meta">'+story.publication+' · '+story.date+'</div>'+'<div class="story-headline">'+story.headline+'</div>'+'<div class="story-brief">'+story.brief+'</div>'+'<span class="story-arrow">↗</span>';grid.appendChild(a);void a.offsetWidth;});if(rest.length){const lbl=document.createElement('div');lbl.className='more-label';lbl.textContent='More';grid.appendChild(lbl);const list=document.createElement('div');list.className='headline-list';rest.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='headline-item';a.innerHTML='<span class="headline-meta">'+abbrevPub(story.publication)+' · '+story.date+'</span>'+'<span class="headline-text">'+story.headline+'</span>';list.appendChild(a);});grid.appendChild(list);}section.scrollIntoView({behavior:'smooth',block:'start'});}
+function selectTopic(id,label){const filtered=stories.filter(s=>s.topics.includes(id));const featured=filtered.filter(s=>s.featured);const rest=filtered.filter(s=>!s.featured);const section=document.getElementById('storiesSection');section.classList.add('visible');document.getElementById('storiesTopicLabel').textContent=label;document.getElementById('storiesCount').textContent=filtered.length+' stor'+(filtered.length===1?'y':'ies');const grid=document.getElementById('storyGrid');grid.innerHTML='';featured.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='story-card';a.innerHTML='<div class="story-meta">'+story.publication+' · '+story.date+'</div>'+'<div class="story-headline">'+story.headline+'</div>'+'<div class="story-brief">'+story.brief+'</div>'+'<span class="story-arrow">↗</span>';grid.appendChild(a);void a.offsetWidth;});if(rest.length){const lbl=document.createElement('div');lbl.className='more-label';lbl.textContent='More';grid.appendChild(lbl);const list=document.createElement('div');list.className='headline-list';rest.forEach(story=>{const a=document.createElement('a');a.href=story.url;a.className='headline-item';a.innerHTML='<span class="headline-meta">'+story.publication+' · '+story.date+'</span>'+'<span class="headline-text">'+story.headline+'</span>';list.appendChild(a);});grid.appendChild(list);}section.scrollIntoView({behavior:'smooth',block:'start'});}
 renderTopics();
 </script>
 </body>
