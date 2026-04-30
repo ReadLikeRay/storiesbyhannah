@@ -383,7 +383,7 @@ const publications = ["The New York Times","Associated Press","Chicago Tribune",
 const ledeStories=stories.filter(s=>s.inLedeRoulette&&s.lede);
 function shuffle(arr){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 let ledeQueue=ledeStories.length?shuffle(ledeStories.map((_,i)=>i)):[];let ledePos=0;
-function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent='“'+story.lede+'”';sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
+function nextLede(){if(!ledeQueue.length)return;if(ledePos>=ledeQueue.length){ledeQueue=shuffle(ledeStories.map((_,i)=>i));ledePos=0;}const story=ledeStories[ledeQueue[ledePos++]];const textEl=document.getElementById('ledeText');const sourceEl=document.getElementById('ledeSource');textEl.classList.add('fading');sourceEl.classList.add('fading');setTimeout(()=>{textEl.textContent=story.lede;sourceEl.textContent=story.headline+'  ·  '+story.publication+'  ·  '+story.date;document.getElementById('ledeReadBtn').href=story.url;textEl.classList.remove('fading');sourceEl.classList.remove('fading');},240);}
 document.getElementById('ledeAgainBtn').addEventListener('click',nextLede);
 if(ledeQueue.length)nextLede();
 let activeTopicId=null;
